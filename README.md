@@ -22,4 +22,4 @@ Here will be features on which our team is working on:
     - fill with data
     - build functional links
     - add styling and JS where needed
-  - keep views responsible for a large variety of resolutions
+  - keep views responsive for a large variety of resolutions
