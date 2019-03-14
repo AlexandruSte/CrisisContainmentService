@@ -14,9 +14,12 @@ in on-the-edge situations.
   
 # 4. Last version
 Here will be included information about the progress made in the recent update:
-by now none
+  - shaped the HTML
   
 # 3. Ongoing
 Here will be features on which our team is working on:
   - deploying a fully functional front-end - out of HTML and CSS (JS for the rescue)
-  - keep views responsible for a large variety of resolutions
+    - fill with data
+    - build functional links
+    - add styling and JS where needed
+  - keep views responsive for a large variety of resolutions
