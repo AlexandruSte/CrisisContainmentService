@@ -5,24 +5,29 @@
     <meta charset="UTF-8">
     <title>Cric</title>
     <link rel="stylesheet" href="../style/global.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
     <!-- Header and nav should be on all pages-->
+    <div class="above-header"></div>
+    
     <header>
         <img id="logo" src="../style/img/300x130.png" alt="Logo" />
+        
+        <nav>
+            <a href="#">News</a>
+            <a href="#">Partners</a>
+            <a href="#">Articles</a>
+            <a href="#">Contact</a>
+        </nav>
+        
         <a class="btn btn-ghost" href="#">Login</a>
         <a class="btn btn-full" href="#">Sign Up</a>
     </header>
 
-    <nav>
-        <a href="#">News</a>
-        <a href="#">Partners</a>
-        <a href="#">Articles</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <div id="breaking_news">
+    <br><br><br><br><br>
+    <div class="breaking_news">
         <h1>Breaking News</h1>
     </div>
     <main>
@@ -59,22 +64,27 @@
             </div>
         </div>
        
-        <div class="horizontal_container">
-            <article>
-                <h2>How can I help?</h2>
-                <p>We are always in need of people who can send us alerts or help us find a missing person!</p>
-                <a href="#">Sign Up</a>
-            </article>
-            <article>
-                <h2>What should I do?</h2>
-                <p>Everyone should know how to act in urgent situations. Here you can find tips and recommendations you should follow in case of emergencies.</p>
-                <a href="#">Articles</a>
-            </article>
-            <article>
-                <h2>About the initiative</h2>
-                <p>Our project has started from a town but has the mission to help people worlwide.</p>
-                <a href="#">Find Out More</a>
-            </article>
+       <div class="container">
+            <div class="horizontal_container">
+                <article>
+                    <img src="../style/img/320x150.png" alt="img1">
+                    <h2>How can I help?</h2>
+                    <p>We are always in need of people who can send us alerts or help us find a missing person!</p>
+                    <a href="#" class="btn btn-full">Sign Up</a>
+                </article>
+                <article>
+                    <img src="../style/img/320x150.png" alt="img2">
+                    <h2>What should I do?</h2>
+                    <p>Everyone should know how to act in urgent situations. Here you can find tips and recommendations you should follow in case of emergencies.</p>
+                    <a href="#" class="btn btn-full">See articles</a>
+                </article>
+                <article>
+                    <img src="../style/img/320x150.png" alt="img3">
+                    <h2>About the initiative</h2>
+                    <p>Our project has started from a town but has the mission to help people worlwide.</p>
+                    <a href="#" class="btn btn-full">Find Out More</a>
+                </article>
+            </div>
         </div>
 
     </main>
