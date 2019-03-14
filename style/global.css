@@ -1,6 +1,6 @@
 /*
 General Color : #19af92
-Darker : #148972
+Darker Color : #148972
 */
 
 /*******************************************
@@ -68,6 +68,11 @@ header > a {
     float: right;
     margin-top: 50px;
     margin-right: 20px;
+}
+
+#logo-link {
+    float: left;
+    margin-top: 4px;
 }
 
 header > img {

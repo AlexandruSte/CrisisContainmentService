@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Find Person</title>
+    <title>Find Missing Person | Crisis Centre</title>
     <link rel="stylesheet" href="../style/global.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
     <!-- Header and nav should be on all pages-->
+   <div class="above-header"></div>
+
     <header>
-        <img id="logo" src="#" alt="Logo"/>
-        <a href="#">Login</a>
-        <a href="#">Sign Up</a>
+        <a id="logo-link" href="../views/index.html"> <img id="logo" src="../style/img/300x130.png" alt="Logo" /> </a>
+
+        <nav>
+            <a href="../views/news.html">News</a>
+            <a href="../views/partners.html">Partners</a>
+            <a href="../views/articles.html">Articles</a>
+            <a href="../views/contact.html">Contact</a>
+        </nav>
+
+        <a class="btn btn-ghost" href="#">Login</a>
+        <a class="btn btn-full" href="#">Sign Up</a>
     </header>
 
-    <nav>
-        <a href="#">News</a>
-        <a href="#">Partners</a>
-        <a href="#">Articles</a>
-        <a href="#">Contact</a>
-    </nav>
-
+    <br><br><br><br><br><br>
     <main>
         <h2>Find a Person Form</h2>
         <h5><i>This person was involved in ... (specific alert) </i></h5>
@@ -29,7 +36,7 @@
             <input type="text" placeholder="Last Name*">
             <input type="text" placeholder="Physical description*">
             <label> Upload photo: </label>
-            <input type="file" name="file" placeholder="Photo"/>
+            <input type="file" name="file" placeholder="Photo" />
             <input type="text" placeholder="Time since last contact">
             <input type="submit" value="Submit!">
         </form>
@@ -38,11 +45,12 @@
 
     <!-- Footer should be on all pages-->
     <footer>
-        <ul>
-            <li>Email: </li>
-            <li>Telephone: </li>
-            <li>Address: </li>
+        <ul class="footer-nav">
+            <li>Email: crisiscenter@contact.com </li>
+            <li>Telephone: +407999999</li>
+            <li>Address: General Barthelot Street, Iasi, Romania</li>
         </ul>
     </footer>
 </body>
+
 </html>

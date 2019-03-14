@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Cric</title>
+    <title>Home | Crisis Center</title>
     <link rel="stylesheet" href="../style/global.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 </head>
@@ -11,28 +11,27 @@
 <body>
     <!-- Header and nav should be on all pages-->
     <div class="above-header"></div>
-    
+
     <header>
-        <img id="logo" src="../style/img/300x130.png" alt="Logo" />
-        
+        <a id="logo-link" href="../views/index.html"> <img id="logo" src="../style/img/300x130.png" alt="Logo" /> </a>
+
         <nav>
-            <a href="#">News</a>
-            <a href="#">Partners</a>
-            <a href="#">Articles</a>
-            <a href="#">Contact</a>
+            <a href="../views/news.html">News</a>
+            <a href="../views/partners.html">Partners</a>
+            <a href="../views/articles.html">Articles</a>
+            <a href="../views/contact.html">Contact</a>
         </nav>
-        
+
         <a class="btn btn-ghost" href="#">Login</a>
         <a class="btn btn-full" href="#">Sign Up</a>
     </header>
 
-    <br><br><br><br><br>
+    <br><br><br><br><br><br>
     <div class="breaking_news">
         <h1>Breaking News</h1>
     </div>
     <main>
-
-       <div class="slideshow">
+        <div class="slideshow">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
                 <img src="../style/img/900x400.png" alt="#" style="width:100%" />
@@ -63,26 +62,26 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
             </div>
         </div>
-       
-       <div class="container">
+
+        <div class="container">
             <div class="horizontal_container">
                 <article>
                     <img src="../style/img/320x150.png" alt="img1">
                     <h2>How can I help?</h2>
                     <p>We are always in need of people who can send us alerts or help us find a missing person!</p>
-                    <a href="#" class="btn btn-full">Sign Up</a>
+                    <a href="../views/sign_up.html" class="btn btn-full">Sign Up</a>
                 </article>
                 <article>
                     <img src="../style/img/320x150.png" alt="img2">
                     <h2>What should I do?</h2>
                     <p>Everyone should know how to act in urgent situations. Here you can find tips and recommendations you should follow in case of emergencies.</p>
-                    <a href="#" class="btn btn-full">See articles</a>
+                    <a href="../views/articles.html" class="btn btn-full">See articles</a>
                 </article>
                 <article>
                     <img src="../style/img/320x150.png" alt="img3">
                     <h2>About the initiative</h2>
                     <p>Our project has started from a town but has the mission to help people worlwide.</p>
-                    <a href="#" class="btn btn-full">Find Out More</a>
+                    <a href="../views/contact.html" class="btn btn-full">Find Out More</a>
                 </article>
             </div>
         </div>
