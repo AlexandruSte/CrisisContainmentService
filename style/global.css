@@ -1,4 +1,163 @@
+/*
+General Color : #19af92
+Darker : #148972
+*/
+
+/*******************************************
+                    BASIC SETUP
+*******************************************/
+
 * {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    height: 100%;
     padding: 0;
     margin: 0;
 }
+
+body {
+    min-height: 100%;
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/********************************************
+                    HEADER
+********************************************/
+
+header{
+    font-size: 130%;
+}
+
+header > a {
+    float:right;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+header > img {
+    width: 250px;
+    height: 120px;
+}
+
+/********************************************
+                    NAVIGATOR
+********************************************/
+
+nav{
+    margin: 30px 0;
+}
+
+nav > a{
+    display: inline;
+    margin-right: 25px;
+}
+
+nav a:link,
+nav a:visited {
+    padding: 8px 0;
+    text-decoration: none;
+    font-size: 120%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+nav a:hover,
+nav a:active {
+    border-bottom: 2px solid #19af92;
+}
+
+
+
+/********************************************
+                    BUTTONS
+********************************************/
+
+.btn:link,
+.btn:visited {
+    font-size: 85%;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 100px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited{
+    background-color: #19af92;
+    border: 1px solid #19af92;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #19af92;
+    color: #19af92;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #148972;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #148972;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #148972;
+    color: #fff;
+}
+
+/********************************************
+                    FOOTER
+********************************************/
+
+body::after {
+  content: '';
+  display: block;
+  height: 50px; /* Set same as footer's height */
+}
+
+footer {
+    position: relative;
+    background-color: #333;
+    padding: 50px;
+    font-size: 90%;
+    color: white;
+    bottom: 0;
+    height: 50px;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.footer-nav li {
+    display: block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child {
+    margin-right: 0;
+}
+
+
+
+
+
+
