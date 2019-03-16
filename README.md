@@ -21,6 +21,6 @@ Here will be included information about the progress made in the recent update:
 Here will be features on which our team is working on:
   - deploying a fully functional front-end - out of HTML and CSS (JS for the rescue)
     - fill with data
-    - build functional links
     - add styling and JS where needed
   - keep views responsive for a large variety of resolutions
+    - right now we handle two breakpoints: 1300px and 930px in width
