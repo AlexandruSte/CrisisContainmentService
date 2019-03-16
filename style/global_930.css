@@ -1,0 +1,8 @@
+@media (max-width: 930px) {
+
+    header {
+        display:grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,8 @@
+@media (max-width: 1300px) {
+
+    nav > a:link {
+        display:block;
+        padding: 0px 0px 4px 0px;
+        margin-top: 4px;
+    }
+}

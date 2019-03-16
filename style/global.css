@@ -56,30 +56,28 @@ h2 {
     position: fixed;
     width: 100%;
     border-top: #19af92 3px solid;
+    z-index: 99;
 }
 
 header {
+    display:flex;
+    justify-content: left;
     width: 75%;
     margin: 0 auto;
-    padding-top: 5px;
+    padding-top: 0.5%;
 }
 
-header > a {
-    float: right;
-    margin-top: 50px;
-    margin-right: 20px;
+#logo {
+    width:100%;
 }
 
-#logo-link {
-    float: left;
-    margin-top: 4px;
+header > .user-info {
+    margin:auto;
 }
 
-header > img {
-    width: 250px;
-    height: 120px;
-    display: inline;
-    float: left;
+header > .user-info > a {
+    margin-top: 0.5em;
+    margin-left: 0.5em;
 }
 
 /********************************************
@@ -87,9 +85,8 @@ header > img {
 ********************************************/
 
 nav {
-    margin-top: 56px;
-    margin-left: 40px;
-    float: left;
+    margin: auto;
+    margin-left: 2em;
 }
 
 nav > a {
@@ -118,7 +115,7 @@ nav a:active {
 
 .btn:link,
 .btn:visited {
-    font-size: 130%;
+    font-size: 120%;
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -306,7 +303,7 @@ body::after {
 footer {
     width: 100%;
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     background-color: #333;
     font-size: 90%;
     color: white;
