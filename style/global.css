@@ -259,19 +259,20 @@ img {
 .horizontal_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    grid-gap: 60px;
     width: 75%;
     margin: 0 auto;
 }
 
 .horizontal_container > article {
     position: relative;
-    height: 500px;
+    height: 600px;
     background-color: #fff;
 }
 
 .horizontal_container > article > h2 {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .horizontal_container > article > img {
@@ -283,6 +284,7 @@ img {
     font-size: 110%;
     line-height: 140%;
     margin: 0 10%;
+    padding-bottom: 10px;
 }
 
 .horizontal_container > article > a {
