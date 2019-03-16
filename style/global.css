@@ -42,17 +42,18 @@ h2 {
     letter-spacing: 0.5px;
 }
 
-.breaking_news{
+.breaking_news {
     width: 75%;
     margin: 0 auto;
     margin-top: 3%;
     margin-bottom: 3%;
 }
+
 /********************************************
                     HEADER
 ********************************************/
 
-.above-header{
+.above-header {
     position: fixed;
     width: 100%;
     border-top: #19af92 3px solid;
@@ -60,7 +61,7 @@ h2 {
 }
 
 header {
-    display:flex;
+    display: flex;
     justify-content: left;
     width: 75%;
     margin: 0 auto;
@@ -68,11 +69,11 @@ header {
 }
 
 #logo {
-    width:100%;
+    width: 100%;
 }
 
 header > .user-info {
-    margin:auto;
+    margin: auto;
 }
 
 header > .user-info > a {
@@ -162,7 +163,9 @@ nav a:active {
     display: none;
 }
 
-img {vertical-align: middle;}
+img {
+    vertical-align: middle;
+}
 
 .slideshow {
     max-width: 1000px;
@@ -212,11 +215,11 @@ img {vertical-align: middle;}
 }
 
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
 /* The dots/bullets/indicators */
@@ -248,7 +251,7 @@ img {vertical-align: middle;}
                     GRID
 ********************************************/
 
-.container{
+.container {
     background-color: #f4f4f4;
     padding: 110px 0;
 }
@@ -261,31 +264,31 @@ img {vertical-align: middle;}
     margin: 0 auto;
 }
 
-
-.horizontal_container > article{
-    position:relative;
+.horizontal_container > article {
+    position: relative;
     height: 500px;
     background-color: #fff;
 }
 
-.horizontal_container > article > h2{
+.horizontal_container > article > h2 {
     text-align: center;
 }
 
-.horizontal_container > article > img{
+.horizontal_container > article > img {
     width: 100%;
+    border-bottom: solid 1px lightgray;
 }
 
-.horizontal_container > article > p{
-    font-size: 120%;
-    line-height: 130%;
+.horizontal_container > article > p {
+    font-size: 110%;
+    line-height: 140%;
     margin: 0 10%;
 }
 
-.horizontal_container > article > a{
+.horizontal_container > article > a {
     position: absolute;
-    right:    5%;
-    bottom:   3%;
+    right: 5%;
+    bottom: 3%;
     font-size: 130%;
 }
 
