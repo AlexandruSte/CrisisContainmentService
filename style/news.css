@@ -4,6 +4,10 @@
     margin-top:2em;
 }
 
+h2 {
+    font-size: 150%;
+}
+
 .horizontal_container > article > .sources {
     position:absolute;
     bottom:1em;
@@ -16,10 +20,11 @@
 
 .horizontal_container > article > .sources > .btn {
     margin:auto;
-    margin-right:0;
+    margin-right:10px;
 }
 
 
 .horizontal_container > article > .sources > .source {
     padding-top:0.5em;
+    margin-left: 10px;
 }

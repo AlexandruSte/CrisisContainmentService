@@ -15,7 +15,8 @@ in on-the-edge situations.
 # 4. Last version
 Here will be included information about the progress made in the recent update:
   - shaped the HTML
-  - included links for each page, shaped CSS
+  - included links for each page
+  - built general templates (global CSS)
   
 # 3. Ongoing
 Here will be features on which our team is working on:
