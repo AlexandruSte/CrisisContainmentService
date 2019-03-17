@@ -4,10 +4,6 @@
     margin-top:2em;
 }
 
-h2 {
-    font-size: 150%;
-}
-
 .horizontal_container > article > .sources {
     position:absolute;
     bottom:1em;
@@ -27,4 +23,16 @@ h2 {
 .horizontal_container > article > .sources > .source {
     padding-top:0.5em;
     margin-left: 10px;
+}
+
+.horizontal_container > article > .sources > a:nth-child(1){
+    margin-left: 7%;
+}
+
+.horizontal_container > article > .sources > a:nth-child(2){
+    margin-right: 7%;
+}
+
+.horizontal_container > article > p {
+    font-size: 120%;
 }
