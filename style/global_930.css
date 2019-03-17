@@ -5,4 +5,12 @@
         grid-template-columns: auto;
         justify-content: center;
     }
+
+    .horizontal_container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 60px;
+        width: 75%;
+        margin: 0 auto;
+    }
 }

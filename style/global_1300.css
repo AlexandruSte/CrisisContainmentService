@@ -2,7 +2,15 @@
 
     nav > a:link {
         display:block;
-        padding: 0px 0px 4px 0px;
+        padding: 0 0 4px 0;
         margin-top: 4px;
+    }
+
+    .horizontal_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 60px;
+        width: 75%;
+        margin: 0 auto;
     }
 }
