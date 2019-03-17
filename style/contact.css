@@ -1,0 +1,31 @@
+main > div > img {
+    float: left;
+    margin-left:100px;
+    margin-right: 25px;
+    width:40%;
+    min-height: auto;
+    max-height: auto;
+    padding: 10px;
+}
+
+.textToFloat{
+    width:100%;
+    min-height:auto;
+    max-height:auto;
+}
+
+.textToFloat > p{
+    margin: 5px;
+    margin-right: 100px;
+    max-width: 100%;
+}
+
+.textToFloat>p:nth-child(3){
+    height: 250px;
+}
+
+#contact_us{
+    width:1000px;
+    margin:auto;
+}
+
