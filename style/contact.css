@@ -2,13 +2,18 @@
     float:left;
     width:50%;
     height:auto;
+    margin-left:3%;
+}
+
+#about_us>h2:first-child {
+    width: 75%;
+    margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 #contact_us{
     float:right;
-    width:40%;
-    margin-right: 10%;
-    height:auto;
+    width:47%;
 }
 
 main{
@@ -16,7 +21,7 @@ main{
 }
 
 main > div > img {
-    margin-left:10%;
+    margin-left:17%;
     margin-right: 5%;
     min-height: auto;
     max-height: auto;
@@ -25,12 +30,12 @@ main > div > img {
 }
 
 form {
-    width:50%;
+    width:20%;
     margin: 0 auto;
 }
 
 .textToFloat{
     width: 100%;
-    margin-left:10%;
+    margin-left:17%;
     margin-right:5%;
 }
