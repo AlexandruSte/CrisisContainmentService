@@ -13,4 +13,16 @@
         width: 75%;
         margin: 0 auto;
     }
+
+
+
+    #account_type > select {
+        margin-left:1em;
+        width:30%;
+    }
+
+    form {
+        width:90%;
+        margin: 0 auto;
+    }
 }

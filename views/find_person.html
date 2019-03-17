@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<br><br><br><br><br><br>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Find Missing Person | Crisis Centre</title>
     <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/form.css">
     <link rel="stylesheet" href="../style/global_1300.css">
     <link rel="stylesheet" href="../style/global_930.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
@@ -26,14 +26,14 @@
         </nav>
 
         <div class="user-info">
-            <a class="btn btn-ghost" href="#">Login</a>
+            <a class="btn btn-ghost" href="../views/login.html">Login</a>
             <a class="btn btn-full" href="../views/sign_up.html">Sign Up</a>
         </div>
     </header>
 
     <main>
         <h2>Find a Person Form</h2>
-        <h5><i>This person was involved in ... (specific alert) </i></h5>
+        <h4><i>This person was involved in ... </i></h4>
         <form>
             <p> The fields marked with * are mandatory.</p>
             <input type="text" placeholder="First Name*">
@@ -42,7 +42,7 @@
             <label> Upload photo: </label>
             <input type="file" name="file" placeholder="Photo" />
             <input type="text" placeholder="Time since last contact">
-            <input type="submit" value="Submit!">
+            <a id="submitButton" class="btn btn-full" href="#">Submit!</a>
         </form>
     </main>
 

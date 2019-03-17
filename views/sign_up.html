@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up | Crisis Center</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/form.css">
     <link rel="stylesheet" href="../style/global_1300.css">
     <link rel="stylesheet" href="../style/global_930.css">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -25,19 +26,21 @@
         </nav>
 
         <div class="user-info">
-            <a class="btn btn-ghost" href="#">Login</a>
+            <a class="btn btn-ghost" href="../views/login.html">Login</a>
             <a class="btn btn-full" href="../views/sign_up.html">Sign Up</a>
         </div>
     </header>
 
     <main>
-        <h2>Sign up to help and get help.</h2>
-        <label>
-            <select>
-                <option value="Citizen">Citizen</option>
+        <h2>Sign up to help and get help</h2>
+        <label id="account_type" for="type">
+            The type of user:
+            <select id="type">
                 <option value="Autority">Autority</option>
+                <option value="Citizen">Citizen</option>
             </select>
         </label>
+
 
         <form id="autority_form">
             <p> The fields marked with * are mandatory.</p>
@@ -52,25 +55,28 @@
                 </select>
             </label>
             <input type="text" placeholder="Name*">
-            <input type="text" placeholder="Mail*">
+            <input type="text" placeholder="E-Mail*">
+            <input type="password" placeholder="Password*">
+            <input type="password" placeholder="Repeat Password*">
             <input type="text" placeholder="Zip Code*">
             <input type="text" placeholder="City*">
             <input type="text" placeholder="Country*">
             <input type="text" placeholder="Phone number*">
-            <input type="submit" value="Submit!">
+            <a id="submitButton" class="btn btn-full" href="#">Submit!</a>
+            <!--<input type="submit" class="btn btn-full" value="Submit!">-->
         </form>
 
-        <form id="citizen_form">
+        <!--<form id="citizen_form">
             <p> The fields marked with * are mandatory.</p>
             <input type="text" placeholder="First Name*">
             <input type="text" placeholder="Last Name*">
-            <input type="text" placeholder="Mail*">
+            <input type="text" placeholder="E-Mail*">
             <input type="text" placeholder="Zip Code">
             <input type="text" placeholder="City*">
             <input type="text" placeholder="Country*">
             <input type="text" placeholder="Phone number">
             <input type="submit" value="Submit!">
-        </form>
+        </form>-->
     </main>
 
 
