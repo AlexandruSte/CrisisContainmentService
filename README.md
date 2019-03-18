@@ -7,6 +7,7 @@ willing to help and provide safety for the ones in need. The project will also h
 in on-the-edge situations.
 
 # 2. Technologies
+LAMP full-stack build:
   - HTTP server: Apache
   - front-end: HTML, CSS, JS
   - back-end: PHP
