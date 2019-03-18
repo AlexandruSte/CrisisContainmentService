@@ -41,3 +41,7 @@ h4 {
     display:flex;
     justify-content: space-around;
 }
+
+textarea{
+    font-family: 'Lato', 'Arial', sans-serif;
+}

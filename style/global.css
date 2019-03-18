@@ -212,7 +212,7 @@ img {
     bottom: 10%;
     text-align: center;
     line-height: 110%;
-    background-color: rgba(220, 220, 220, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .numbertext {
