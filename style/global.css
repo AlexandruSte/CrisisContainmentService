@@ -291,7 +291,6 @@ img {
 
 .horizontal_container > article > img {
     width: 100%;
-    border-bottom: solid 1px lightgray;
 }
 
 .horizontal_container > article > p {
