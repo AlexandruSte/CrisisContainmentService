@@ -1,16 +1,38 @@
 main{
-    display:flex;
-    flex-wrap:wrap;
+    overflow:hidden;
+    margin-left:10%;
+    display:grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 3% 3%;
 }
 
-main>article{
-    margin-left:5%;
-    margin-bottom:5%;
-    align-content:flex-start;
-    width:25%;
-}
 
 main>article>img{
     width:100%;
-    height:auto;
+    position:relative;
+}   
+
+main>article>img.USGS{
+    padding-top:25%;
+}
+
+main>article>p.USGS{
+    padding-top:38%;
+}
+
+main>article>img.STC{
+    padding-top:35%;
+}
+
+main>article>p.STC{
+    padding-top:45%;
+}
+
+main>article>img.MC{
+    padding-top:25%;
+}
+
+main>article>p.MC{
+    padding-top:19%;
 }
