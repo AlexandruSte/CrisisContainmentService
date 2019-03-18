@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Dashboard | Crisis Center</title>
     <link rel="stylesheet" href="../style/global.css">
+    <link rel="stylesheet" href="../style/dashboard.css">
     <link rel="stylesheet" href="../style/global_1300.css">
     <link rel="stylesheet" href="../style/global_930.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
@@ -30,18 +31,18 @@
         </div>
     </header>
 
-    <br><br><br><br><br><br>
     <main>
 
         <!-- To be reshaped-->
+        <h2> Signed as Autority/Citizen</h2>
         <div id="main_panel">
-            <h2> Signed as Autority/Citizen</h2>
-            <button>Create Alert</button>
+            <a class="btn btn-full" href="../views/add_alert.html">Add Alert</a>
+            <a class="btn btn-full" href="../views/find_person.html">Find Person</a>
         </div>
 
         <div id="alert_history">
             <h2>Alerts in Progress and History</h2>
-            <section class="article_slideshow">
+            <section class="horizontal_container">
                 <article>
                     <h2>Alert 1</h2>
                     <p>short description</p>
@@ -59,7 +60,7 @@
 
         <div id="near_alerts">
             <h2>Near Alerts</h2>
-            <section class="article_slideshow">
+            <section class="horizontal_container">
                 <article>
                     <h2>Alert 1</h2>
                     <p>short description</p>
