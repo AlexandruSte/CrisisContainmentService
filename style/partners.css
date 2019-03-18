@@ -1,0 +1,16 @@
+main{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+main>article{
+    margin-left:5%;
+    margin-bottom:5%;
+    align-content:flex-start;
+    width:25%;
+}
+
+main>article>img{
+    width:100%;
+    height:auto;
+}
