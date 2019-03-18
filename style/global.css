@@ -160,8 +160,7 @@ nav a:active {
 /********************************************
                     SLIDESHOW
 ********************************************/
-
-.mySlides {
+.slides{
     display: none;
 }
 
@@ -176,7 +175,6 @@ img {
     width: 85%;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
     cursor: pointer;
@@ -193,39 +191,38 @@ img {
     user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Caption text */
 .text {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
+    font-size: 220%;
     font-weight: 600;
     padding: 8px 12px;
     position: absolute;
     width: 100%;
-    bottom: 45px;
+    bottom: 10%;
     text-align: center;
+    line-height: 110%;
+    background-color: rgba(220, 220, 220, 0.3);
 }
 
 .numbertext {
     color: #f2f2f2;
-    font-size: 12px;
+    font-size: 26px;
     padding: 8px 12px;
     position: absolute;
-    top: 0;
+    top: 6px;
 }
 
-/* The dots/bullets/indicators */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -258,6 +255,11 @@ img {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+.slideshow-link{
+    font-size: 60%;
+    color: white;
 }
 
 /********************************************
