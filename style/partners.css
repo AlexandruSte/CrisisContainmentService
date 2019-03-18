@@ -7,14 +7,12 @@ main {
     margin-bottom: 10%;
 }
 
-
 main > article > img {
     width: 80%;
-     display: block;
-  margin-left: auto;
-  margin-right: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 
 main > article > img.USGS {
     padding-top: 25%;
@@ -26,8 +24,8 @@ main > article > p.USGS {
 
 main > article > img.UNICEF {
     width: 60%;
-    padding-top: 10%;
-    padding-bottom: 9%;
+    padding-top: 8%;
+    padding-bottom: 11%;
 }
 
 main > article > img.STC {
