@@ -66,4 +66,22 @@
     #articles_main > aside {
         width:75%;
     }
+
+
+    .article-container {
+        width: 90%;
+        font-family: calibri;
+    }
+
+    .article-container > p {
+        font-size: 100%;
+    }
+
+    .article-information > ol {
+        width: 90%;
+    }
+
+    .article-information > p {
+        font-size:100%;
+    }
 }
