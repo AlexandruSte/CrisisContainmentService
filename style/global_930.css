@@ -66,4 +66,8 @@
     #articles_main > aside {
         width:75%;
     }
+
+    #articles_main {
+        margin-bottom: 10%;
+    }
 }
