@@ -33,7 +33,7 @@
 
 
     <main>
-        <h2>Add Alert Form</h2>
+        <h2>Add Alert</h2>
         <form>
             <p> The fields marked with * are mandatory.</p>
             <!-- maybe a map to enhance location control -->
@@ -41,13 +41,16 @@
             <label>
                 <select>
                     <option value="default">Select type of alert*</option>
+                    <option value="tornado">Avalanche</option>
                     <option value="earthquake">Earthquake</option>
-                    <option value="tsunami">Tsunami</option>
-                    <option value="wildfire">Wilfire</option>
+                    <option value="tornado">Flood</option>
                     <option value="tornado">Tornado</option>
+                    <option value="tsunami">Tsunami</option>
+                    <option value="wildfire">Wildfire</option>
+                    <option value="wildfire">Other</option>
                 </select>
             </label>
-            <textarea rows="4" placeholder="Description"></textarea>
+            <textarea rows="4" placeholder="Describe the alert* (how many injured, when did it happen)"></textarea>
             <a id="submitButton" class="btn btn-full" href="#">Submit!</a>
         </form>
     </main>

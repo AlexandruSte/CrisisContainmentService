@@ -1,7 +1,7 @@
 @media (max-width: 930px) {
 
     header {
-        display:grid;
+        display: grid;
         grid-template-columns: auto;
         justify-content: center;
     }
@@ -15,12 +15,12 @@
     }
 
     #account_type > select {
-        margin-left:1em;
-        width:30%;
+        margin-left: 1em;
+        width: 30%;
     }
 
     form {
-        width:90%;
+        width: 90%;
         margin: 0 auto;
     }
 
@@ -36,14 +36,14 @@
     #main_panel {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        width:100%;
-        margin:auto;
+        width: 100%;
+        margin: auto;
     }
 
     #main_panel > a {
-        width:50%;
+        width: 50%;
         text-align: center;
-        margin:auto;
+        margin: auto;
         margin-bottom: 10%;
     }
 

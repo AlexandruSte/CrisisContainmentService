@@ -1,7 +1,6 @@
 @media (max-width: 1300px) {
-
     nav > a:link {
-        display:block;
+        display: block;
         padding: 0 0 4px 0;
         margin-top: 4px;
     }
@@ -15,7 +14,7 @@
     }
 
     form {
-        width:40%;
+        width: 40%;
         margin: 0 auto;
     }
 
@@ -31,8 +30,7 @@
     #main_panel {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        width:70%;
-        margin:auto;
+        width: 70%;
+        margin: auto;
     }
-
 }

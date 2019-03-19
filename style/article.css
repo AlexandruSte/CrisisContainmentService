@@ -1,6 +1,6 @@
 h1 {
     color: #000;
-    font-size: 240%;
+    font-size: 260%;
     word-spacing: 4px;
     letter-spacing: 1px;
 }
@@ -30,6 +30,7 @@ p{
     width: 73%;
     margin: 0 auto;
     margin-bottom: 5%;
+    font-family: calibri;
 }
 
 article > * {
@@ -77,5 +78,10 @@ ol > li {
 }
 
 ol{
-    width: 82%;
+    width: 72%;
+}
+
+article > p{
+    margin-top: 0;
+    margin-bottom: 20px;
 }

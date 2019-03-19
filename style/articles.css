@@ -1,0 +1,36 @@
+main{
+    display:grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows:30% 30% 30%;
+    grid-gap:5% 3%;
+    margin-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main>aside{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column:1;
+    margin-left:50%;
+}
+
+main>article>img{
+    width:30%;
+    height:auto;
+    float:left;
+    margin-left:2%;
+}
+
+h2{
+    text-align:left;
+    font-size: 100%;
+}
+
+.toFloat{
+    float:right;
+    position:relative;
+    left: -20%;
+    margin-right:10%;
+    width:30%;  
+}
