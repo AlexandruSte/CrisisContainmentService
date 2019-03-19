@@ -13,13 +13,13 @@ LAMP full-stack build:
   - back-end: PHP
   - database: MariaDB
   
-# 4. Last version
+# 3. Last version
 Here will be included information about the progress made in the recent update:
   - shaped the HTML
   - included links for each page
   - built general templates (global CSS)
   
-# 3. Ongoing
+# 4. Ongoing
 Here will be features on which our team is working on:
   - deploying a fully functional front-end - out of HTML and CSS (JS for the rescue)
     - fill with data
