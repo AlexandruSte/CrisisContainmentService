@@ -59,4 +59,6 @@ p {
 
 main > article > a {
     margin-left: 11%;
+    text-decoration: none;
+    bottom: 0;
 }

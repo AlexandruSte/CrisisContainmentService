@@ -29,6 +29,8 @@ p {
     max-width: none;
 }
 
+
+
 .article-container {
     width: 75%;
     margin: 0 auto;
@@ -60,15 +62,9 @@ article > * {
     width: 100%;
 }
 
-#cpr {
-    width: 70%;
-    height: 560px;
-}
-
-#cpr1 {
-    margin-top: 2%;
-    width: 82%;
-    height: 560px;
+.cpr {
+    width: 75%;
+    height: auto;
 }
 
 ol > li {

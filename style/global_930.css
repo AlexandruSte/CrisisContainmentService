@@ -66,6 +66,9 @@
         width:75%;
     }
 
+    #articles_main{
+        margin-bottom:250px;
+    }
 
     .article-container {
         width: 90%;
