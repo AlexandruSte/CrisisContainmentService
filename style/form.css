@@ -50,3 +50,7 @@ h4 {
 textarea {
     font-family: 'Lato', 'Arial', sans-serif;
 }
+
+a{
+    text-decoration: none;
+}

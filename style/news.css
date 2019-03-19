@@ -51,3 +51,7 @@ h2 {
 .horizontal_container > article:nth-child(2) > p {
     margin-top: 20%;
 }
+
+section > a{
+    text-decoration: none;
+}
