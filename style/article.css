@@ -64,6 +64,7 @@ article > * {
 
 .cpr {
     width: 75%;
+    height: auto;
 }
 
 ol > li {
