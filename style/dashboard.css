@@ -27,5 +27,12 @@ body::after{
 article > h3{
     font-size: 140%;
     margin-bottom: 9%;
+    padding: 2%;
+    text-align: center;
+}
+
+#near_alerts {
+    background-color: #f4f4f4;
+    padding: 3%;
 }
 
