@@ -32,6 +32,7 @@
         grid-template-columns: repeat(1, 1fr);
         width: 70%;
         margin: auto;
+        height: auto;
     }
 
     #articles_main {
@@ -45,10 +46,12 @@
 
     #articles_main > aside {
         position: relative;
+        grid-row-start: 1;
+        grid-row-end: 1;
         margin: auto;
         margin-top:2%;
         width:50%;
-        height:75%;
+        height:auto;
     }
 
 
