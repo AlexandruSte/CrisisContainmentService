@@ -14,8 +14,6 @@
         margin: 0 auto;
     }
 
-
-
     #account_type > select {
         margin-left:1em;
         width:30%;
@@ -47,5 +45,14 @@
         text-align: center;
         margin:auto;
         margin-bottom: 10%;
+    }
+
+    .contact_us{
+        width:100%;
+    }
+
+    .about_us{
+        width:70%;
+        margin-left:3%;
     }
 }
