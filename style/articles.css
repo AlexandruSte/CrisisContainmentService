@@ -14,6 +14,28 @@ main > aside {
     grid-column: 1;
     margin-left: 50%;
     background-color: #f4f4f4;
+    height: 25%;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 50px;
+}
+
+li > a{
+    text-decoration: none;
+}
+
+li > a:hover,
+li > a:active{
+    font-size: 110%;
+    border-bottom: 2px solid #19af92;
+}
+
+li:link,
+li:visited {
+    padding: 8px 0;
+    font-size: 100%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }
 
 main > aside > h2 {
@@ -36,11 +58,14 @@ main > article > img {
 
 h5 {
     color: #148972;
+    margin-top: 10px;
 }
 
 h2 {
     text-align: left;
-    font-size: 150%;
+    font-size: 180%;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .toFloat {
@@ -49,6 +74,16 @@ h2 {
     left: -20%;
     margin-right: 10%;
     width: 30%;
-    font-size: 120%;
+    font-size: 125%;
     line-height: 130%;
+}
+
+.toFloat > a{
+    text-decoration: none;
+    font-size: 90%;
+}
+
+.toFloat > a:hover,
+.toFloat > a:active{
+    font-size: 100%;
 }
