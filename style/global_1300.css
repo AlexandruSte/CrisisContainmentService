@@ -33,4 +33,32 @@
         width: 70%;
         margin: auto;
     }
+
+    #articles_main {
+        grid-template-columns: 100%;
+        grid-gap: 3% 3%;
+        margin:auto;
+        margin-top: 2%;
+
+    }
+
+
+    #articles_main > aside {
+        position: relative;
+        margin: auto;
+        margin-top:2%;
+        width:50%;
+        height:75%;
+    }
+
+
+    #articles_main > article {
+        width:75%;
+        margin:auto;
+     }
+
+     .toFloat {
+         margin-right: 10%;
+     }
+
 }

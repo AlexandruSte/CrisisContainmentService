@@ -55,4 +55,15 @@
         width: 70%;
         margin-left: 3%;
     }
+
+    .toFloat {
+        float: none;
+        margin-right: 0;
+        width:100%;
+    }
+
+
+    #articles_main > aside {
+        width:75%;
+    }
 }
