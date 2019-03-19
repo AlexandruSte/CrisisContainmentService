@@ -18,11 +18,8 @@ Here will be included information about the progress made in the recent update:
   - shaped the HTML
   - included links for each page
   - built general templates (global CSS)
+  - pages filled with data
+  - added styling to all pages
   
 # 4. Ongoing
-Here will be features on which our team is working on:
-  - deploying a fully functional front-end - out of HTML and CSS (JS for the rescue)
-    - fill with data
-    - add styling and JS where needed
-  - keep views responsive for a large variety of resolutions
-    - right now we handle two breakpoints: 1300px and 930px in width
+Plannig for future updates.
