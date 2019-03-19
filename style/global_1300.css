@@ -46,8 +46,6 @@
 
     #articles_main > aside {
         position: relative;
-        grid-row-start: 1;
-        grid-row-end: 1;
         margin: auto;
         margin-top:2%;
         width:50%;
