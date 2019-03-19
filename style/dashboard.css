@@ -1,14 +1,13 @@
 #main_panel {
     display: flex;
     justify-content: space-between;
-    width:40%;
-    margin:auto;
+    width: 40%;
+    margin: auto;
 }
 
 #main_panel > a {
-    width:30%;
+    width: 30%;
     text-align: center;
-    margin:auto;
+    margin: auto;
     margin-bottom: 10%;
 }
-

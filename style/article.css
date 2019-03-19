@@ -5,28 +5,27 @@ h1 {
     letter-spacing: 1px;
 }
 
-h2{
+h2 {
     text-align: left;
     margin-bottom: 0;
     margin-top: 4.5%;
     font-size: 180%;
 }
 
-h3{
+h3 {
     text-align: left;
     margin-bottom: 0;
     margin-top: 2.5%;
     font-size: 140%;
 }
 
-p{
+p {
     font-size: 140%;
     line-height: 115%;
     word-spacing: 2px;
-    letter-spacing: 1px;
 }
 
-.article-container{
+.article-container {
     width: 73%;
     margin: 0 auto;
     margin-bottom: 5%;
@@ -37,32 +36,32 @@ article > * {
     margin-left: 3%;
 }
 
-.article-title{
+.article-title {
     text-align: left;
     margin-top: 5%;
     margin-bottom: 1.5%;
 }
 
-.article-data{
+.article-data {
     margin: 0 auto;
     margin-left: 14%;
 }
 
-.author-date{
+.author-date {
     display: block;
 }
 
-.article-information{
+.article-information {
     margin: 0 auto;
     width: 100%;
 }
 
-#cpr{
+#cpr {
     width: 70%;
     height: 560px;
 }
 
-#cpr1{
+#cpr1 {
     margin-top: 2%;
     width: 82%;
     height: 560px;
@@ -72,16 +71,15 @@ ol > li {
     font-size: 120%;
     line-height: 115%;
     word-spacing: 2px;
-    letter-spacing: 1px;
     margin-bottom: 20px;
     margin-left: 30px;
 }
 
-ol{
+ol {
     width: 72%;
 }
 
-article > p{
+article > p {
     margin-top: 0;
     margin-bottom: 20px;
 }
