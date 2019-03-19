@@ -11,3 +11,21 @@
     margin: auto;
     margin-bottom: 10%;
 }
+
+.horizontal_container{
+    margin-top: 50px;
+}
+
+section > article {
+    height: 100%;
+}
+
+body::after{
+    height: 200px;
+}
+
+article > h3{
+    font-size: 140%;
+    margin-bottom: 9%;
+}
+
