@@ -33,3 +33,8 @@ section {
 #toc_container li, #toc_container ul, #toc_container ul li{
     list-style: none ;
 }
+
+footer {
+    line-height: 0.5;
+    color: #000c67;
+}
