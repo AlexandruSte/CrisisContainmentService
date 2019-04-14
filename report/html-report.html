@@ -84,7 +84,22 @@
 
     <section id="db">
         <h1> 3. Database </h1>
-        <p> ceva detalii despre fiecare tabel, motivatia pt care avem nevoie de un db? </p>
+        <p>In this application, we make use of a database in order to store all the information so that people can see and create alerts when they need to.</p>
+        <p> <strong>user</strong> and <strong>authority</strong> tables provide storage for all existing people on the platform.  </p>
+        <p> <strong>alert</strong> table is used to store all the alerts made by users or authorities. </p>
+        <ul>
+            <li>required : location, type, description</li>
+            <li>isSolved - 1 for "unresolved", 2 for "in progress", 3 for "done"</li>
+            <li>userType - 1 for Users, 2 for Authorities</li>
+        </ul>
+        <p><strong>missing_person</strong> table stores all the alerts made by users about a missing person. </p>
+        <ul>
+            <li>required : firstName, lastName, lastInterraction, description</li>
+            <li>optional : photo</li>
+            <li>isSolved - 1 for "unresolved", 2 for "in progress", 3 for "done"</li>
+            <li>id_user refers to the user that created the alert</li>
+        </ul>
+        <p><strong>alert_creator</strong> table associates an alert with an user/authority.</p>
         <h3 id="db_1"> 3.1 Database schema </h3>
         <p> <img src="database.jpg" alt="Database Schema" style="width: 90%;"/> </p>
     </section>
