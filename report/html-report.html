@@ -39,8 +39,14 @@
             </li>
             <li><a href="#functionalities">6. Functionalities</a>
                 <ul>
-                    <li><a href="#func_1">6.1 Functionality 1 </a></li>
-                    <li><a href="#func_2">6.2 Functionality 2 </a></li>
+                    <li><a href="#func_1">6.1 Emergency Map </a></li>
+                    <li><a href="#func_2">6.2 New Alert </a></li>
+                    <li><a href="#func_3">6.3 New Missing Person</a></li>
+                    <li><a href="#func_4">6.4 Find A Person</a></li>
+                    <li><a href="#func_5">6.5 Contact Us</a></li>
+                    <li><a href="#func_6">6.6 Login</a></li>
+                    <li><a href="#func_7">6.7 Register</a></li>
+                    <li><a href="#func_8">6.8 Emergency Manager</a></li>
                 </ul>
             </li>
             <li><a href="#api">7. External APIs</a>
@@ -126,9 +132,22 @@
 
     <section id="functionalities">
         <h1> 6. Functionalities </h1>
-        <h3 id="func_1"> 6.1 Functionality Title 1 </h3>
-        <p> eventual o descriere? </p>
-        <h3 id="func_2"> 6.2 Functionality Title 2 </h3>
+        <h3 id="func_1"> 6.1 Emergency Map </h3>
+        <p> A map will be provided for both registered users and guests. The map will be shown in the home page will be taken using Google Crisis Map API. </p>
+        <h3 id="func_2"> 6.2 New Alert </h3>
+        <p> The users that represent an authority will have the option to add a new alert to all of the users and guests. For this, they will have to fill in a form with some important details. For example, an imporant detail would be the location of the alert. </p>
+        <h3 id="func_3"> 6.3 New Missing Person </h3>
+        <p> For a specific alert that is still open, someone may add a missing person, even if it is an authority type of user or a normal user. This would be provided via a form, for important details about de person, like name, age or details regarding last time he/she was seen. </p>
+        <h3 id="func_4"> 6.4 Find A Person </h3>
+        <p> Whenever a missing person is found, the website will send a notification to all the users to verify that he/she really is the person that the user is trying to find. If the answer to this is affirmative, then the "Missing Person" alert will close and will be logically deleted from the database, not phisically, because we want a full history of alerts for every user. </p>
+        <h3 id="func_5"> 6.5 Contact Us </h3>
+        <p> Anyone can use the form in Contact page to communicate with the team behind this project, either to give feedback or to ask question regarding this project.</p>
+        <h3 id="func_6"> 6.6 Login </h3>
+        <p> The Login process will be done via a form with email and password. They will be verified with the database, with the important mention that the password will be sent already encrypted to the server.</p>
+        <h3 id="func_7"> 6.7 Register </h3>
+        <p> This process will also be done via a form, asking for email, password, name, type of user (citizen or authority), country, city, ZIP Code and phone number. After these are given, the server will check so that for that email it is not already a user. If the answer is OK, then will put this data into the database, also with the password encrypted in the client.</p>
+        <h3 id="func_8"> 6.8 Emergency Manager </h3>
+        <p> This feature refferes to the possibility to close some emergencies when they're outdated or "Find Person" requests. As in "Find Person", the deletion will be a logical one, not a phisical one. </p>
     </section>
 
     <section id="api">
