@@ -160,10 +160,28 @@
 
     <section id="api">
         <h1> 7. External APIs </h1>
-        <h3 id= "api_1"> 7.1 API 1 </h3>
-        <p> descriere </p>
-        <h3 id= "api_2"> 7.2 API 2 </h3>
-        <p> descriere </p>
+        <h3 id= "api_1"> 7.1 Google Crisis Map API</h3>
+        <p> Google Crisis Map API is the main soul of the news page and maily to the whole application. This will help to ilustrate layers related to different scenarios of emergency. We will have a local hosted server meant to distribute this
+            API, one which will be customized with our own information. By our own information, we also reffer to custom formatted alerts obtained from other API's and news sources. At this stage we will implement a checker not to have multiple
+            alerts reffering to the same location. This will enhance the user exeperience and the find a person use case.
+        </p>
+        <h3 id= "api_2"> 7.2 Google Maps </h3>
+        <p> This will be intensively used in the context of identifying the longitutde and latitude (a canonical representation of a location) of a written address. This will also be useful to translate fixed coordinates to a human readable
+            address. Also we will also integrate the visual google maps needed to identify a fixed location by clicking on the map. </p>
+        <h3 id= "api_3"> 7.3 Facebook API </h3>
+        <p> Facebook API will be used to integrate a login system into our page. But we will use it more extensevly, meaning that we will gather as much information as we can to build a exhaustive detaliation of a missig person, or a specific
+            event (of course respecting the privacy consent).</p>
+        <h3 id= "api_4"> 7.4 Twitter API </h3>
+        <p> Twitter API will be used as the other social network related API, meaning that it will help the loging procedure, and also it will help tweeting to spread awareness. (als in the limit of privacy limits) This will also be
+            available for the article section in case there are articles that can be easily found through Twitter related to the problem (this will most probably be done in a latter version).
+        </p>
+        <h3 id= "api_5"> 7.5 Information gathering APIs </h3>
+        <p> First of all we will consider using the <b>National Flood Data API</b>, a system used for monitorizing the issues relatd to flooding. This will also be figured in the google crisis map API by some layering means.<br>
+            Secondly, <b>Foreca Weather Warnings Feed API</b> will also be helpful to model some weather realted issues, which will ultimately be converted in custom alerts interpreted by our application (with respect to copyrights). <br>
+            Finally, <b>United Nations Humanitarian Response API</b> is a huge uplift for our application, as it involves keeping track of emergencies world-wise, not only in USA as the Google Crisis Map does, or <b>P2000 API</b> does in Netherlands.
+        </p>
+        <h3 id= "api_5"> 7.6 News API </h3>
+        <p> As right now we don't need such a carefully selected media, we can just stick to the News API which provides information from several media sources.</p>
     </section>
 
     <section id="technologies">
