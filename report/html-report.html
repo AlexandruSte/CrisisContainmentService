@@ -174,13 +174,13 @@
         <h3 id="func_8"> 6.8 Emergency Manager </h3>
         <p> This feature is referring to the possibility to close some emergencies when they're outdated or "Find Person" requests. As in "Find Person", the deletion will be a logical one, not a phisical one. </p>
     </section>
-
     <section id="api">
         <h1> 7. External APIs </h1>
         <h3 id= "api_1"> 7.1 Google Crisis Map API</h3>
         <p> Google Crisis Map API is the main soul of the news page and maily to the whole application. This will help to ilustrate layers related to different scenarios of emergency. We will have a local hosted server meant to distribute this
             API, one which will be customized with our own information. By our own information, we also reffer to custom formatted alerts obtained from other API's and news sources. At this stage we will implement a checker not to have multiple
-            alerts reffering to the same location. This will enhance the user exeperience and the find a person use case.
+            alerts reffering to the same location. This will enhance the user exeperience and the find a person use case. Furthermore, we will make use of fusion
+            tables to keep the data formated ready to deliver to the View part, namely the google Crisis map API visualizer.
         </p>
         <h3 id= "api_2"> 7.2 Google Maps </h3>
         <p> This will be intensively used in the context of identifying the longitutde and latitude (a canonical representation of a location) of a written address. This will also be useful to translate fixed coordinates to a human readable
@@ -192,18 +192,21 @@
         <p> Twitter API will be used as the other social network related API, meaning that it will help the loging procedure, and also it will help tweeting to spread awareness. (als in the limit of privacy limits) This will also be
             available for the article section in case there are articles that can be easily found through Twitter related to the problem (this will most probably be done in a latter version).
         </p>
-        <h3 id= "api_5"> 7.5 Information gathering APIs </h3>
+        <h3 id= "api_5"> 7.4 Person Finder API </h3>
+        <p> This API will keep track of the person finder component. This will gather data from the Google hosted API in order to deliver a resonable interface
+            to the users. To simplify the process we will try to combine the APIs and keep the raw data in a responsible format.
+        <h3 id= "api_6"> 7.6 Information gathering APIs </h3>
         <p> First of all we will consider using the <b>National Flood Data API</b>, a system used for monitorizing the issues relatd to flooding. This will also be figured in the google crisis map API by some layering means.<br>
             Secondly, <b>Foreca Weather Warnings Feed API</b> will also be helpful to model some weather realted issues, which will ultimately be converted in custom alerts interpreted by our application (with respect to copyrights). <br>
             Finally, <b>United Nations Humanitarian Response API</b> is a huge uplift for our application, as it involves keeping track of emergencies world-wise, not only in USA as the Google Crisis Map does, or <b>P2000 API</b> does in Netherlands.
         </p>
-        <h3 id= "api_6"> 7.6 News API </h3>
+        <h3 id= "api_7"> 7.7 News API </h3>
         <p> As right now we don't need such a carefully selected media, we can just stick to the News API which provides information from several media sources. This will help us to extend our alerts and interpret some of this news into
             out application. As this will be kindly difficult for a plain server processing, the news will be formatted and accepted by the admin only if it fits the our requirements. By now there is only human interaction for approving
             the content, but in the future there will be smarter analysis of the content.
         </p>
 
-        <h3 id= "api_7"> 7.7 Notification</h3>
+        <h3 id= "api_8"> 7.8 Notification</h3>
         <p> At this point we will be figuring out some means of notification throughout diferent browsers, meaning that we need to find a way to alert the user in case out geolocation features togheter with server-side processing report
             the need of a notification. For this we will get data related to different browsers/operating systems, and at the point we will be able to develop a stable version, we will kick a version implying this feature.
         </p>
@@ -213,7 +216,7 @@
         <h1> 8. Technologies </h1>
         <h3 id="tech_1"> 8.1 PHP backend</h3>
         <p> The backend will be implemented in PHP, as this will be the most accessible and responsible for this type of application. Furthermore, the XAMPP stack will be most accessible through this type of backend. Our own REST API will also be supported
-        in PHP as to keep a homogeneous environment of working.
+            in PHP as to keep a homogeneous environment of working.
         </p>
         <h3 id="tech_2"> 8.2 MariaDB</h3>
         <p> This type of database is most suitable for the application as it is also resonable with this type of stack, namely XAMPP. This SQL-based free database is powerful enough to deliver a fast and consistent bulk of information. For
@@ -231,6 +234,10 @@
 
         <h3 id="tech_5"> 8.5 Server - Apache</h3>
         <p> As the previous choice of technologies point towards XAMPP, endly the Apache is a natural choice. </p>
+
+        <h3 id="tech_5"> 8.6 Microservices - CAP</h3>
+        <p> We will make use of several microservices, from which the the most important is CAP, the common alerting protocol, one used, as the name stands,
+            for alerting a user in case of an emercency. We are still keeping under thinking this part, as the integration must be responsible.</p>
     </section>
     
     <section id="bibliography">
