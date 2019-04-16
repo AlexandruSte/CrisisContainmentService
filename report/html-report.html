@@ -10,8 +10,8 @@
 <body>
 
     <h1> Crisis Containment Service Scholarly Report </h1>
-    
-     <div id="toc_container">
+
+    <div id="toc_container">
         <ul class="toc_list">
             <li><a href="#introduction">1. Introduction</a></li>
             <li><a href="#arhitecture">2. Project architecture</a>
@@ -76,19 +76,19 @@
         <p> <b>Crisis Center</b> (Crisis Containment Service) is a Web platform which allows managing situations of crisis (for instance, earthquakes, floods, fire, tsunamis) by authorities or different organisations.
         </p>
         <p>
-        The application integrates <b>Google Crisis Map</b> and Fusion Tables for creating suplimentary layers with the purpose of providing information of interest regarding the events and the affected zones.
-        Moreover, <b>CAP (Common Alerting Protocol)</b> will be used for notifying the population affected directly or in the nearby area. Additionally, social media platforms can be used.
-        Using <b>Geolocation API</b> and services like <b>Google Person Finder</b>, the system can provide automatically information used for finding a missing person and regarding eventual shelters and saving routes.
+            The application integrates <b>Google Crisis Map</b> and Fusion Tables for creating suplimentary layers with the purpose of providing information of interest regarding the events and the affected zones.
+            Moreover, <b>CAP (Common Alerting Protocol)</b> will be used for notifying the population affected directly or in the nearby area. Additionally, social media platforms can be used.
+            Using <b>Geolocation API</b> and services like <b>Google Person Finder</b>, the system can provide automatically information used for finding a missing person and regarding eventual shelters and saving routes.
         </p>
         <p>
-        The website will provide users with the ability to check again the past events in their area and if they were solved.
-        Last but not least, users will be presented a variety of <b>articles</b> regarding how to help organisations, what to do in a crisis, first-aid, a page where <b>world-wide current events</b> are being shown and also a page where other <b>organisations</b> in partnership with Crisis Center can be found.
+            The website will provide users with the ability to check again the past events in their area and if they were solved.
+            Last but not least, users will be presented a variety of <b>articles</b> regarding how to help organisations, what to do in a crisis, first-aid, a page where <b>world-wide current events</b> are being shown and also a page where other <b>organisations</b> in partnership with Crisis Center can be found.
         </p>
     </section>
 
     <section id="architecture">
         <h1> 2. Project architecture </h1>
-        <p> The <b>C4 model</b> for software architecture describes a procedure for documenting and designing software architecture through diagrams. The heart of the approach is that you can use no more than four diagrams, which enables the team to see different levels of granularity. The diagrams are:  </p>
+        <p> The <b>C4 model</b> for software architecture describes a procedure for documenting and designing software architecture through diagrams. The heart of the approach is that you can use no more than four diagrams, which enables the team to see different levels of granularity. The diagrams are: </p>
         <ul>
             <li><b>Context</b> diagram hows the relationship between the system that you're building and other actors, including humans and non-human systems, such as external systems. </li>
             <li><b>Container </b> shows the containers that your final system is deployed into and their relationship to each other. </li>
@@ -107,7 +107,7 @@
     <section id="db">
         <h1> 3. Database </h1>
         <p>In this application, we make use of a database in order to store all the information so that people can see and create alerts when they need to.</p>
-        <p> <strong>user</strong> and <strong>authority</strong> tables provide storage for all existing people on the platform.  </p>
+        <p> <strong>user</strong> and <strong>authority</strong> tables provide storage for all existing people on the platform. </p>
         <p> <strong>alert</strong> table is used to store all the alerts made by users or authorities. </p>
         <ul>
             <li>required : location, type, description</li>
@@ -123,22 +123,22 @@
         </ul>
         <p><strong>alert_creator</strong> table associates an alert with an user/authority.</p>
         <h3 id="db_1"> 3.1 Database schema </h3>
-        <p> <img src="images/database.png" alt="Database Schema" style="width: 90%;"/> </p>
+        <p> <img src="images/database.png" alt="Database Schema" style="width: 90%;" /> </p>
     </section>
 
     <section id="mvc">
         <h1> 4. MVC Model</h1>
         <img id="mvc-pic" src="images/model-view-controller-mvc-explained.jpg" alt="MVC Model">
         <p>Model-View-Controller (MVC) is an arhitectural pattern that separates an application into three main logical components: the model, the view and the controller.
-        Each of these components are built to handle specific development aspects of an application.</p>
+            Each of these components are built to handle specific development aspects of an application.</p>
         <p>Advantages include:</p>
-            <ul>
-                <li>easier maintenance by keeping the data-manipulating logic separate</li>
-                <li>modularity, decoupled code (fewer dependencies)</li>
-                <li>modification not affecting the entire model</li>
-                <li>scalability</li>
-                <li>extensiblity</li>
-            </ul>
+        <ul>
+            <li>easier maintenance by keeping the data-manipulating logic separate</li>
+            <li>modularity, decoupled code (fewer dependencies)</li>
+            <li>modification not affecting the entire model</li>
+            <li>scalability</li>
+            <li>extensiblity</li>
+        </ul>
         <h3 id="mvc_1"> 4.1 Model </h3>
         <p> Responsible for the business domain state knowledge. The model in our application wil consist of the database entities created.</p>
         <h3 id="mvc_2"> 4.2 View </h3>
@@ -177,9 +177,9 @@
 
     <section id="api">
         <h1> 7. External APIs </h1>
-        <h3 id= "api_1"> 7.1 API 1 </h3>
+        <h3 id="api_1"> 7.1 API 1 </h3>
         <p> descriere </p>
-        <h3 id= "api_2"> 7.2 API 2 </h3>
+        <h3 id="api_2"> 7.2 API 2 </h3>
         <p> descriere </p>
     </section>
 
@@ -190,16 +190,16 @@
         <h3 id="tech_2"> 8.1 Technology 1</h3>
         <p> motivatie </p>
     </section>
-    
+
     <section id="bibliography">
         <h1> 9. Bibliography & Sources</h1>
         <h3 id="bibliography"> Bibliography </h3>
         <p><a href="https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm">MVC Framework Introduction</a></p>
         <p><a href="https://c4model.com/">C4 Model</a></p>
         <h3 id="images"> Image sources </h3>
-        <p> <a href="https://helloacm.com/wp-content/uploads/2017/01/model-view-controller-mvc-explained.jpg" target="_blank" > MVC Model </a> </p>
+        <p> <a href="https://helloacm.com/wp-content/uploads/2017/01/model-view-controller-mvc-explained.jpg" target="_blank"> MVC Model </a> </p>
     </section>
-    
+
     <footer>
         <p> <b> TW Project 2019 - B3 Group </b> </p>
         <p> Paduraru Dana </p>
