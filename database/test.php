@@ -1,7 +1,7 @@
 <?php
+    include "../models/Connection.php";
     try {
-        $conn = new PDO("sqlsrv:server = tcp:crisiscontainmentservice.database.windows.net,1433; Database = CrisisContainmentService", "crisisadmin", "...");
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $conn = Connection::Instance();
         $sql = "SELECT * FROM crisis_user";
         foreach ($conn->query($sql) as $row) {
             print $row['id'] . "\t";
