@@ -24,6 +24,7 @@ create table crisis_user(
 
 create table alert(
     id INT NOT NULL IDENTITY,
+    title VARCHAR(100) NOT NULL,
     longitude FLOAT NOT NULL,
     latitude FLOAT NOT NULL,
     type VARCHAR(50) NOT NULL,

@@ -1,6 +1,6 @@
 <?php
     require_once("../models/Alert.php");
-    $alert = new Alert(3.14, 3.14, 'test', 'test', 0);
+    $alert = new Alert("test", 3.14, 3.14, 'test', 'test', 0);
     $alert->create();
     echo "New alert created\n";
     echo "It has id ".$alert->getId()."\n";

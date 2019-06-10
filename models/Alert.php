@@ -3,14 +3,16 @@
 
     class Alert {
         private $id;
+        private $title;
         private $longitude;
         private $latitude;
         private $type;
         private $description;
         private $isSolved;
 
-        public function __construct ($longitude, $latitude, $type, $description, $isSolved)
+        public function __construct ($title, $longitude, $latitude, $type, $description, $isSolved)
         {
+            $this->title = $title;
             $this->longitude = $longitude;
             $this->latitude = $latitude;
             $this->type = $type;
@@ -22,7 +24,8 @@
         public function create(): bool
         {
             $connection = Connection::Instance();
-            $sql = "INSERT INTO alert (longitude, latitude, type, description, isSolved) VALUES ("
+            $sql = "INSERT INTO alert (title, longitude, latitude, type, description, isSolved) VALUES ('"
+                .$this->title."', "
                 .$this->longitude.", "
                 .$this->latitude.", '"
                 .$this->type."', "
@@ -51,6 +54,7 @@
             {
                 foreach ($connection->query($sql) as $row)
                 {
+                    $this->title = $row['title'];
                     $this->longitude = $row['longitude'];
                     $this->latitude = $row['latitude'];
                     $this->type = $row['type'];
@@ -70,6 +74,7 @@
         {
             $connection = Connection::Instance();
             $sql = "UPDATE alert SET "
+                ."title = '" . $this->title."', "
                 ."longitude = " . $this->longitude.", "
                 ."latitude = " . $this->latitude.", "
                 ."type = '" . $this->type."', "
@@ -149,6 +154,16 @@
         public function setIsSolved($isSolved)
         {
             $this->isSolved = $isSolved;
+        }
+
+        public function getTitle()
+        {
+            return $this->title;
+        }
+
+        public function setTitle($title)
+        {
+            $this->title = $title;
         }
     }
 ?>
