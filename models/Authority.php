@@ -95,6 +95,30 @@
             return true;
         }
 
+        public function find($email, $password): bool
+        {
+            $connection = Connection::Instance();
+            $sql = "SELECT * FROM authority WHERE email = '".$email."' AND password = '".$password."';";
+            try
+            {
+                foreach ($connection->query($sql) as $row)
+                {
+                    $this->id=$row['id'];
+                    $this->name = $row['name'];
+                    $this->email = $row['email'];
+                    $this->phone = $row['phone'];
+                    $this->website = $row['website'];
+                    $this->address = $row['address'];
+                    $this->password = $row['password'];
+                    return true;
+                }
+                return false;
+            }
+            catch (PDOException $e) {
+                return false;
+            }
+        }
+
         public function getId(): int
         {
             return $this->id;

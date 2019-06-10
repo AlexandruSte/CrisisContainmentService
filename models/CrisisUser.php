@@ -104,6 +104,32 @@
             return true;
         }
 
+        public function find($email, $password): bool
+        {
+            $connection = Connection::Instance();
+            $sql = "SELECT * FROM crisis_user WHERE email = '".$email."' AND password = '".$password."';";
+            try
+            {
+                foreach ($connection->query($sql) as $row)
+                {
+                    $this->id=$row['id'];
+                    $this->firstname = $row['firstname'];
+                    $this->lastname = $row['lastname'];
+                    $this->email = $row['email'];
+                    $this->phone = $row['phone'];
+                    $this->country = $row['country'];
+                    $this->zipcode = $row['zipcode'];
+                    $this->city = $row['city'];
+                    $this->password = $row['password'];
+                    return true;
+                }
+                return false;
+            }
+            catch (PDOException $e) {
+                return false;
+            }
+        }
+
         public function getId(): int
         {
             return $this->id;
