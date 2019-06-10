@@ -1,5 +1,5 @@
 <?php
-    require_once('../collector_microservice/models/ReliefCollector.php');
+    require_once('../microservices/routines/ReliefCollector.php');
     $collector = ReliefCollector::Instance();
     $collector->run(null);
 ?>

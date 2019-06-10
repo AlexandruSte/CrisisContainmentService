@@ -58,10 +58,10 @@ VALUES ('Antonio', 'Maggiore','antonio_maggiore@mail.com','tastatura','Italy', '
 
 
 -- ALERT
-INSERT INTO alert (longitude, latitude, type, description, isSolved)
-VALUES ('11.043762', '43.471833','Wildfire','No people around, does not spread very quicky as there is no grass around. Solved by the fire department in San Gimignano',1);
-INSERT INTO alert (longitude, latitude, type, description, isSolved)
-VALUES ('52.207560', '0.119528 ','Other','Small duststorm, could affect people outside. Authorities advise people to stay inside until it is gone.',1);
+INSERT INTO alert (title, longitude, latitude, type, description, isSolved)
+VALUES ('Name1', '11.043762', '43.471833','Wildfire','No people around, does not spread very quicky as there is no grass around. Solved by the fire department in San Gimignano',1);
+INSERT INTO alert (title, longitude, latitude, type, description, isSolved)
+VALUES ('Name2', '52.207560', '0.119528 ','Other','Small duststorm, could affect people outside. Authorities advise people to stay inside until it is gone.',1);
 
 -- MISSING_PERSON
 INSERT INTO missing_person (firstname, lastname, lastInterraction, description, isSolved, photo, id_user, id_alert)

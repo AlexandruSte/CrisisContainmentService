@@ -24,6 +24,18 @@
         public function create(): bool
         {
             $connection = Connection::Instance();
+            //check if already exists
+            $sql = "SELECT count(*) \"Number\" FROM authority WHERE email = '" . $this->email . "';";
+            try {
+                $nr=0;
+                foreach ($connection->query($sql) as $row)
+                    $nr+=$row['Number'];
+                if ($nr==0)
+                    return false;
+            }
+            catch (PDOException $e) {
+                return false;
+            }
             $sql = "INSERT INTO authority (name, email, phone, website, address, password) VALUES ('"
                 .$this->name."', '"
                 .$this->email."', '"

@@ -28,6 +28,18 @@
         public function create(): bool
         {
             $connection = Connection::Instance();
+            //check if already exists
+            $sql = "SELECT count(*) \"Number\" FROM crisis_user WHERE email = '" . $this->email . "';";
+            try {
+                $nr=0;
+                foreach ($connection->query($sql) as $row)
+                    $nr+=$row['Number'];
+                if ($nr==0)
+                    return false;
+            }
+            catch (PDOException $e) {
+                return false;
+            }
             $sql = "INSERT INTO crisis_user (firstname, lastname, email, password, country, city, zipcode, phone) VALUES ('"
                 .$this->firstname."', '"
                 .$this->lastname."', '"
