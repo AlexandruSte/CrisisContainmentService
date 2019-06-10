@@ -51,6 +51,19 @@
             }
         }
 
+        //method used to save the current object with this specific id into the database
+        public function save(): bool
+        {
+            $connection = Connection::Instance();
+            $sql = "UPDATE user_alert SET "
+                ."id_user = '" . $this->id_user."', "
+                ."id_alert = " . $this->id_alert . " "
+                ."WHERE id = " . $this->id . ";";
+            if (!($ok = $connection->exec($sql)))
+                return false;
+            return true;
+        }
+
         //method used to remove the object with this specific id
         public function remove(): bool
         {
@@ -69,6 +82,26 @@
         public function setId($id): void
         {
             $this->id = $id;
+        }
+
+        public function getIdUser()
+        {
+            return $this->id_user;
+        }
+
+        public function setIdUser($id_user)
+        {
+            $this->id_user = $id_user;
+        }
+
+        public function getIdAlert()
+        {
+            return $this->id_alert;
+        }
+
+        public function setIdAlert($id_alert)
+        {
+            $this->id_alert = $id_alert;
         }
     }
 ?>

@@ -8,16 +8,18 @@
         private $lastInteraction;
         private $description;
         private $photo;
+        private $isSolved;
         private $id_alert;
         private $id_user;
 
-        public function __construct ($firstname, $lastname, $lastInteraction, $description, $photo, $id_alert, $id_user)
+        public function __construct ($firstname, $lastname, $lastInteraction, $description, $photo, $isSolved, $id_alert, $id_user)
         {
             $this->firstname = $firstname;
             $this->lastname = $lastname;
             $this->lastInteraction = $lastInteraction;
             $this->description = $description;
             $this->photo = $photo;
+            $this->isSolved = $isSolved;
             $this->id_alert = $id_alert;
             $this->id_user = $id_user;
         }
@@ -26,8 +28,15 @@
         public function create(): bool
         {
             $connection = Connection::Instance();
-            $sql = "INSERT INTO missing_person (firstname, lastname, lastInteraction, description, photo, id_alert, id_user) VALUES ('"
-                .$this->firstname."', '".$this->lastname."', '".$this->lastInteraction."', '".$this->description."', ".$this->photo.", ".$this->id_alert.", ".$this->id_user.");";
+            $sql = "INSERT INTO missing_person (firstname, lastname, lastInterraction, description, photo, isSolved, id_alert, id_user) VALUES ('"
+                .$this->firstname."', '"
+                .$this->lastname."', "
+                .($this->lastInteraction == null? "NULL": "'".$this->lastInteraction."'").", "
+                .($this->description == null? "NULL": "'".$this->description."'").", "
+                .($this->photo == null? "NULL" : $this->photo).", "
+                .$this->isSolved.", "
+                .$this->id_alert.", "
+                .$this->id_user.");";
             if (!($ok = $connection->exec($sql)))
                 return false;
             $sql = "SELECT TOP(1) id FROM missing_person ORDER BY id DESC";
@@ -53,9 +62,10 @@
                 {
                     $this->firstname = $row['firstname'];
                     $this->lastname = $row['lastname'];
-                    $this->lastInteraction = $row['lastInteraction'];
+                    $this->lastInteraction = $row['lastInterraction'];
                     $this->description = $row['description'];
                     $this->photo = $row['photo'];
+                    $this->isSolved = $row['isSolved'];
                     $this->id_alert = $row['id_alert'];
                     $this->id_user = $row['id_user'];
                 }
@@ -64,7 +74,25 @@
             catch (PDOException $e) {
                 return false;
             }
+        }
 
+        //method used to save the current object with this specific id into the database
+        public function save(): bool
+        {
+            $connection = Connection::Instance();
+            $sql = "UPDATE missing_person SET "
+                ."firstname = '" . $this->firstname."', "
+                ."lastname = '" . $this->lastname."', "
+                ."lastInterraction = " . ($this->lastInteraction == null? "NULL": "'".$this->lastInteraction."'").", "
+                ."description = " . ($this->description == null? "NULL": "'".$this->description."'") .", "
+                ."photo = " . ($this->photo == null? "NULL" : $this->photo) .", "
+                ."isSolved = " . $this->isSolved .", "
+                ."id_alert = " . $this->id_alert .", "
+                ."id_user = " . $this->id_user . " "
+                ."WHERE id = " . $this->id . ";";
+            if (!($ok = $connection->exec($sql)))
+                return false;
+            return true;
         }
 
         //method used to remove the object with this specific id
@@ -85,6 +113,76 @@
         public function setId($id): void
         {
             $this->id = $id;
+        }
+
+        public function getFirstname()
+        {
+            return $this->firstname;
+        }
+
+        public function setFirstname($firstname)
+        {
+            $this->firstname = $firstname;
+        }
+
+        public function getLastname()
+        {
+            return $this->lastname;
+        }
+
+        public function setLastname($lastname)
+        {
+            $this->lastname = $lastname;
+        }
+
+        public function getLastInteraction()
+        {
+            return $this->lastInteraction;
+        }
+
+        public function setLastInteraction($lastInteraction)
+        {
+            $this->lastInteraction = $lastInteraction;
+        }
+
+        public function getDescription()
+        {
+            return $this->description;
+        }
+
+        public function setDescription($description)
+        {
+            $this->description = $description;
+        }
+
+        public function getPhoto()
+        {
+            return $this->photo;
+        }
+
+        public function setPhoto($photo)
+        {
+            $this->photo = $photo;
+        }
+
+        public function getIdUser()
+        {
+            return $this->id_user;
+        }
+
+        public function setIdUser($id_user)
+        {
+             $this->id_user = $id_user;
+        }
+
+        public function getIdAlert()
+        {
+            return $this->id_alert;
+        }
+
+        public function setIdAlert($id_alert)
+        {
+            $this->id_alert = $id_alert;
         }
     }
 ?>

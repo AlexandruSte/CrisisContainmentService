@@ -29,7 +29,14 @@
         {
             $connection = Connection::Instance();
             $sql = "INSERT INTO crisis_user (firstname, lastname, email, password, country, city, zipcode, phone) VALUES ('"
-                .$this->firstname."', '".$this->lastname."', '".$this->email."', '".$this->password."', '".$this->country."', '".$this->city."', '".$this->zipcode."', '".$this->phone."');";
+                .$this->firstname."', '"
+                .$this->lastname."', '"
+                .$this->email."', '"
+                .$this->password."', '"
+                .$this->country."', '"
+                .$this->city."', '"
+                .$this->zipcode."', '"
+                .$this->phone."');";
             if (!($ok = $connection->exec($sql)))
                 return false;
             $sql = "SELECT TOP(1) id FROM crisis_user ORDER BY id DESC";
@@ -69,6 +76,24 @@
             }
         }
 
+        //method used to save the current object with this specific id into the database
+        public function save(): bool
+        {
+            $connection = Connection::Instance();
+            $sql = "UPDATE crisis_user SET "
+                ."firstname = '" . $this->firstname."', "
+                ."lastname = '" . $this->lastname."', "
+                ."email = '" . $this->email."', "
+                ."password = '" . $this->password ."', "
+                ."country = '" . $this->country ."', "
+                ."city = '" . $this->city ."', "
+                ."zipcode = '" . $this->zipcode . "' "
+                ."WHERE id = " . $this->id . ";";
+            if (!($ok = $connection->exec($sql)))
+                return false;
+            return true;
+        }
+
         //method used to remove the object with this specific id
         public function remove(): bool
         {
@@ -87,6 +112,86 @@
         public function setId($id): void
         {
             $this->id = $id;
+        }
+
+        public function getFirstname()
+        {
+            return $this->firstname;
+        }
+
+        public function setFirstname($firstname)
+        {
+            $this->firstname = $firstname;
+        }
+
+        public function getLastname()
+        {
+            return $this->lastname;
+        }
+
+        public function setLastname($lastname)
+        {
+            $this->lastname = $lastname;
+        }
+
+        public function getEmail()
+        {
+            return $this->email;
+        }
+
+        public function setEmail($email)
+        {
+            $this->email = $email;
+        }
+
+        public function getPassword()
+        {
+            return $this->password;
+        }
+
+        public function setPassword($password)
+        {
+            $this->password = $password;
+        }
+
+        public function getCountry()
+        {
+            return $this->country;
+        }
+
+        public function setCountry($country)
+        {
+            $this->country = $country;
+        }
+
+        public function getCity()
+        {
+            return $this->city;
+        }
+
+        public function setCity($city)
+        {
+            $this->city = $city;
+        }
+
+        public function getZipcode()
+        {
+            return $this->zipcode;
+        }
+
+        public function setZipcode($zipcode)
+        {
+            $this->zipcode = $zipcode;
+        }
+
+        public function getPhone()
+        {
+            return $this->phone;
+        }
+
+        public function setPhone($phone)
+        {
+            $this->phone = $phone;
         }
     }
 ?>

@@ -23,7 +23,11 @@
         {
             $connection = Connection::Instance();
             $sql = "INSERT INTO alert (longitude, latitude, type, description, isSolved) VALUES ("
-                    .$this->longitude.", ".$this->latitude.", '".$this->type."', '".$this->description."', ".$this->isSolved.");";
+                .$this->longitude.", "
+                .$this->latitude.", '"
+                .$this->type."', "
+                .($this->description==null?"NULL":"'".$this->description."'").", "
+                .$this->isSolved.");";
             if (!($ok = $connection->exec($sql)))
                 return false;
             $sql = "SELECT TOP(1) id FROM alert ORDER BY id DESC";
@@ -61,6 +65,22 @@
 
         }
 
+        //method used to save the current object with this specific id into the database
+        public function save(): bool
+        {
+            $connection = Connection::Instance();
+            $sql = "UPDATE alert SET "
+                ."longitude = " . $this->longitude.", "
+                ."latitude = " . $this->latitude.", "
+                ."type = '" . $this->type."', "
+                ."description = " . ($this->description==null?"NULL":"'".$this->description."'") .", "
+                ."isSolved = " . $this->isSolved . " "
+                ."WHERE id = " . $this->id . ";";
+            if (!($ok = $connection->exec($sql)))
+                return false;
+            return true;
+        }
+
         //method used to remove the object with this specific id
         public function remove(): bool
         {
@@ -71,19 +91,24 @@
             return true;
         }
 
-        public function getId(): int
+        public function getId()
         {
             return $this->id;
         }
 
-        public function setId($id): void
+        public function setId($id)
         {
             $this->id = $id;
         }
 
-        public function getLongitutde(): float
+        public function getLongitude()
         {
             return $this->longitude;
+        }
+
+        public function setLongitude($longitude)
+        {
+            $this->longitude = $longitude;
         }
 
         public function getLatitude()
@@ -91,9 +116,19 @@
             return $this->latitude;
         }
 
+        public function setLatitude($latitude)
+        {
+            $this->latitude = $latitude;
+        }
+
         public function getType()
         {
             return $this->type;
+        }
+
+        public function setType($type)
+        {
+            $this->type = $type;
         }
 
         public function getDescription()
@@ -101,9 +136,19 @@
             return $this->desciption;
         }
 
+        public function setDescription($description)
+        {
+            $this->desciption = $description;
+        }
+
         public function getIsSolved()
         {
             return $this->isSolved;
+        }
+
+        public function setIsSolved($isSolved)
+        {
+            $this->isSolved = $isSolved;
         }
     }
 ?>

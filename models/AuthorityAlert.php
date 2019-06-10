@@ -17,7 +17,8 @@
         {
             $connection = Connection::Instance();
             $sql = "INSERT INTO authority_alert (id_authority, id_alert) VALUES ("
-                .$this->id_authority.", ".$this->id_alert.");";
+                .$this->id_authority.", "
+                .$this->id_alert.");";
             if (!($ok = $connection->exec($sql)))
                 return false;
             $sql = "SELECT TOP(1) id FROM authority_alert ORDER BY id DESC";
@@ -51,6 +52,19 @@
             }
         }
 
+        //method used to save the current object with this specific id into the database
+        public function save(): bool
+        {
+            $connection = Connection::Instance();
+            $sql = "UPDATE authority_alert SET "
+                ."id_authority = " . $this->id_authority.", "
+                ."id_alert = " . $this->id_alert . " "
+                ."WHERE id = " . $this->id . ";";
+            if (!($ok = $connection->exec($sql)))
+                return false;
+            return true;
+        }
+
         //method used to remove the object with this specific id
         public function remove(): bool
         {
@@ -69,6 +83,26 @@
         public function setId($id): void
         {
             $this->id = $id;
+        }
+
+        public function getIdAuthority()
+        {
+            return $this->id_authority;
+        }
+
+        public function setIdAuthority($id_authority)
+        {
+            $this->id_authority = $id_authority;
+        }
+
+        public function getIdAlert()
+        {
+            return $this->id_alert;
+        }
+
+        public function setIdAlert($id_alert)
+        {
+            $this->id_alert = $id_alert;
         }
     }
 ?>
