@@ -1,0 +1,255 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="user-guide.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <title>Crisis Center - User Guide</title>
+</head>
+
+<body>
+
+    <h1> Crisis Center - User Guide </h1>
+    
+     <div id="toc_container">
+        <ul class="toc_list">
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#arhitecture">2. Project architecture</a>
+                <ul>
+                    <li><a href="#arhitecture_1">2.1 C4 Model Diagrams</a></li>
+                    <ul>
+                        <li><a href="#arhitecture_1_1">2.1.1 Context </a></li>
+                        <li><a href="#arhitecture_1_2">2.1.2 Container</a></li>
+                        <li><a href="#arhitecture_1_3">2.1.3 Component</a></li>
+                    </ul>
+                </ul>
+            </li>
+            <li><a href="#db">3. Database</a>
+                <ul>
+                    <li><a href="#db_1">3.1 Database Schema</a></li>
+                </ul>
+            </li>
+            <li><a href="#mvc">4. MVC Model</a>
+                <ul>
+                    <li><a href="#mvc_1">4.1 Model </a></li>
+                    <li><a href="#mvc_2">4.2 View </a></li>
+                    <li><a href="#mvc_3">4.3 Controller </a></li>
+                </ul>
+            </li>
+            <li><a href="#usecases">5. Use-Case Diagram</a></li>
+            <li><a href="#functionalities">6. Functionalities</a>
+                <ul>
+                    <li><a href="#func_1">6.1 Emergency Map </a></li>
+                    <li><a href="#func_2">6.2 New Alert </a></li>
+                    <li><a href="#func_3">6.3 New Missing Person</a></li>
+                    <li><a href="#func_4">6.4 Find A Person</a></li>
+                    <li><a href="#func_5">6.5 Contact Us</a></li>
+                    <li><a href="#func_6">6.6 Login</a></li>
+                    <li><a href="#func_7">6.7 Register</a></li>
+                    <li><a href="#func_8">6.8 Emergency Manager</a></li>
+                </ul>
+            </li>
+            <li><a href="#api">7. External APIs</a>
+                <ul>
+                    <li><a href="#api_1">7.1 Api 1 </a></li>
+                    <li><a href="#api_2">7.2 Api 2 </a></li>
+                </ul>
+            </li>
+            <li><a href="#technologies">8. Technologies</a>
+                <ul>
+                    <li><a href="#tech_1">8.1 Technology 1 </a></li>
+                    <li><a href="#tech_2">8.2 Technology 2 </a></li>
+                </ul>
+            </li>
+            <li><a href="#bibliography">9. Bibliography & Sources</a>
+        </ul>
+    </div>
+
+    <section id="introduction">
+        <h1> 1. Introduction </h1>
+        <img src="../style/img/logo/logo-250-nobackground.png">
+        <p> <b>Crisis Center</b> (Crisis Containment Service) is a Web platform which allows managing situations of crisis (for instance, earthquakes, floods, fire, tsunamis) by authorities or different organisations.
+        </p>
+        <p>
+        The application integrates <b>Google Crisis Map</b> and services like <b>Google Person Finder</b>, in order for the system automatically provide information used for finding a missing person and regarding eventual shelters and saving routes in cases of emergency.
+        </p>
+        <p>
+        The website will provide users with the ability to check again the past events in their area and if they were solved.
+        Last but not least, users will be presented a variety of <b>articles</b> regarding how to help organisations, what to do in a crisis, first-aid, a page where <b>world-wide current events</b> are being shown and also a page where other <b>organisations</b> in partnership with Crisis Center can be found.
+        </p>
+    </section>
+
+    <section id="architecture">
+        <h1> 2. Creating an account and logging in </h1>
+        <p> In order to have access to recent news in your local area, you need to create an account. Don't worry, your informations are safely stored, as we respect GDPR procedures.
+        </p>
+        <h1> 2.1 How to Create an Account </h1>
+        <ol>
+            <li> On the home page, press the button "Sign Up" in the upper-right corner of the page. You will be redirected to the Register page.</li>
+            <li> On the Register page, you will have to choose if you want to create an account as a citizen or an authority. 
+                All of the information in the form is required, as it is needed to be able to recognize emergencies in your local area. Complete the fields carefully, choosing a valid email (if we need to contact you or send notifications to you) and a strong passphrase. </li>
+            <li> After you have completed filling out the fields, press the <em><strong>Submit!</strong></em>  button. This will take you back to the home page. From now on, you will be able to log in. </li>
+        </ol> 
+        <strong> <em> Important: </em></strong> If you have signed as an authority, you will be asked to validate the information you have provided via email. (future functionality)
+        <h1> 2.2 How to Log in</h1>
+        <ol>
+            <li>In order to login, you have to press the button <em><strong> Login </strong></em> located in the upper right section of every page. </li>
+            <li> You need to provide the email you registered with and your passphrase. </li>
+            <li> After that, you can press the button "Submit". If you provided the correct information, then the login is successful and you will be redirected to the login page. </li>
+        </ol>
+        <h1> 2.3 I Forgot My Password</h1>
+        <p> Do not worry if you forgot your password! You can always reset it by pressing the "Forgot password" button located in the login form. Then, a mail will be sent to you and will take you to further steps of recovering it. (future functionality) </p>
+    </section>
+
+    <section id="db">
+        <h1> 3. What Our Website Offers </h1>
+        <p> Through Crisis Center, we want to provide anyone that enters our website with the essential information regarding how to help somebody and what is happening around the world.
+        </p>
+        <p> This is why we provide users with breaking news and articles. <strong> You do not need to log in or have an account in order to access this information. </strong></p>
+        <h1> 3.1 Breaking News </h1>
+        <p> The Home Page is where breaking news titles are being shown. In case you want more information on what happened, you can enter the News page, where you can find short texts that will lead you to other safe websites where full articles are being presented. </p>
+        <h1> 3.2 Worldwide Emergencies and Current Events </h1>
+        <p> You can see critical areas around the globe on the News Page, where Google Crisis Map is integrated. All the data presented is verified and always being updated. </p>
+        <h1> 3.3 See Partners </h1>
+        <p> We have associated with diverse organizations which strive to make the world a better place. You can find out about them and our partnerships in the Partners page. </p>
+        <h1> 3.4 Read articles </h1>
+        <p> In order to gain extra information on how to act during a crisis, we have provided our website with different articles in many areas like First Aid, Events, Certificates, Volunteering. Every article is being shown in the Articles page, and has a short description in order to find out what it is about.
+        </p>
+        <p> In order to read the full article, you need to press the button "Continue Reading" which appears for every article under its short description.</p>
+        <h1> 3.5 Contact Us </h1>
+        <p> We have provided a Contact page where you can find out more information about Crisis Center, who we are and what is our motivation and our mission.</p>
+        <p> Nevertheless, if you have any feedback or question for us, there is a Contact form that you can submit which will be sent to us via email. </p>
+        <p> In order to submit it, you have to complete all the required fields and press the button "Submit".</p>
+    </section>
+
+    <section id="mvc">
+        <h1> 4. MVC Model</h1>
+        <img id="mvc-pic" src="images/model-view-controller-mvc-explained.jpg">
+        <p>Model-View-Controller (MVC) is an arhitectural pattern that separates an application into three main logical components: the model, the view and the controller.
+        Each of these components are built to handle specific development aspects of an application.</p>
+        <p>Advantages include:</p>
+        <ul>
+            <li>easier maintenance by keeping the data-manipulating logic separate</li>
+            <li>modularity, decoupled code (fewer dependencies)</li>
+            <li>modification not affecting the entire model</li>
+            <li>scalability</li>
+            <li>extensiblity</li>
+        </ul>
+        <h3 id="mvc_1"> 4.1 Model </h3>
+        <p> Responsible for the business domain state knowledge. The model in our application wil consist of the database entities created.</p>
+        <h3 id="mvc_2"> 4.2 View </h3>
+        <p> Responsible for a presentation view of the business domain. It will be represented by html files for every page in the website. </p>
+        <h3 id="mvc_3"> 4.3 Controller </h3>
+        <p> Responsible for controlling the flow and state of the user input. Our application implements php scripts, using the models and generating the views. </p>
+    </section>
+
+    <section id="usecases">
+        <h1> 5. Use-Case Diagram </h1>
+        <img id="usecase" src="images/use-case diagram.jpg" style="width:150%">
+    </section>
+
+    <section id="functionalities">
+        <h1> 6. Functionalities </h1>
+        <h3 id="func_1"> 6.1 Emergency Map </h3>
+        <p> A map will be provided for both registered users and guests. The map will be shown in the home page will be created using Google Crisis Map API. </p>
+        <h3 id="func_2"> 6.2 New Alert </h3>
+        <p> The users that represent an authority will have the option to add a new alert for all of the users and guests. For this, they will have to fill in a form with some important details. For example, an important detail would be the location of the alert; this will be given with latitude and longitude coordinates. </p>
+        <h3 id="func_3"> 6.3 New Missing Person </h3>
+        <p> For a specific alert that is still open, users may add a missing person, even if it is an authority type of user or a normal user. This would be provided via a form, for important details about de person, like name, age or details regarding last time he/she was seen. A missing person can be added without mentioning a specific alert.</p>
+        <h3 id="func_4"> 6.4 Find A Person </h3>
+        <p> Whenever a missing person is found, the website will send a notification to all the users to verify that he/she really is the person that the user is trying to find. If the answer to this is affirmative, then the "Missing Person" alert will close and will be logically deleted from the database, not phisically, because we want a full history of alerts for every user. </p>
+        <h3 id="func_5"> 6.5 Contact Us </h3>
+        <p> Anyone(logged/unlogged users) can use the form in Contact page to communicate with the team behind this project, either to give feedback or to ask questions regarding this project.</p>
+        <h3 id="func_6"> 6.6 Login </h3>
+        <p> The Login process will be done via a form with an email and password. They will be verified with the database, with the important mention that the password will be sent already encrypted to the server.</p>
+        <h3 id="func_7"> 6.7 Register </h3>
+        <p> This process will also be done via a form, asking for an email, password, name, type of user (citizen or authority), country, city, ZIP Code and phone number. After these fields are completed, the server will check if the email does not already exist in the databse. If the answer is negative, the data will be stored in a database, along with the password being encrypted.</p>
+        <h3 id="func_8"> 6.8 Emergency Manager </h3>
+        <p> This feature is referring to the possibility to close some emergencies when they're outdated or "Find Person" requests. As in "Find Person", the deletion will be a logical one, not a phisical one. </p>
+    </section>
+    <section id="api">
+        <h1> 7. External APIs </h1>
+        <h3 id= "api_1"> 7.1 Google Crisis Map API</h3>
+        <p> Google Crisis Map API is the main soul of the news page and maily to the whole application. This will help to ilustrate layers related to different scenarios of emergency. We will have a local hosted server meant to distribute this
+            API, one which will be customized with our own information. By our own information, we also reffer to custom formatted alerts obtained from other API's and news sources. At this stage we will implement a checker not to have multiple
+            alerts reffering to the same location. This will enhance the user exeperience and the find a person use case. Furthermore, we will make use of fusion
+            tables to keep the data formated ready to deliver to the View part, namely the google Crisis map API visualizer.
+        </p>
+        <h3 id= "api_2"> 7.2 Google Maps </h3>
+        <p> This will be intensively used in the context of identifying the longitutde and latitude (a canonical representation of a location) of a written address. This will also be useful to translate fixed coordinates to a human readable
+            address. Also we will also integrate the visual google maps needed to identify a fixed location by clicking on the map. Also at this point of <b>geolocation</b>, we will make use of geolocation sevices to detect ones position.</p>
+        <h3 id= "api_3"> 7.3 Facebook API </h3>
+        <p> Facebook API will be used to integrate a login system into our page. But we will use it more extensevly, meaning that we will gather as much information as we can to build a exhaustive detaliation of a missig person, or a specific
+            event (of course respecting the privacy consent).</p>
+        <h3 id= "api_4"> 7.4 Twitter API </h3>
+        <p> Twitter API will be used as the other social network related API, meaning that it will help the loging procedure, and also it will help tweeting to spread awareness. (als in the limit of privacy limits) This will also be
+            available for the article section in case there are articles that can be easily found through Twitter related to the problem (this will most probably be done in a latter version).
+        </p>
+        <h3 id= "api_5"> 7.4 Person Finder API </h3>
+        <p> This API will keep track of the person finder component. This will gather data from the Google hosted API in order to deliver a resonable interface
+            to the users. To simplify the process we will try to combine the APIs and keep the raw data in a responsible format.
+        <h3 id= "api_6"> 7.6 Information gathering APIs </h3>
+        <p> First of all we will consider using the <b>National Flood Data API</b>, a system used for monitorizing the issues relatd to flooding. This will also be figured in the google crisis map API by some layering means.<br>
+            Secondly, <b>Foreca Weather Warnings Feed API</b> will also be helpful to model some weather realted issues, which will ultimately be converted in custom alerts interpreted by our application (with respect to copyrights). <br>
+            Finally, <b>United Nations Humanitarian Response API</b> is a huge uplift for our application, as it involves keeping track of emergencies world-wise, not only in USA as the Google Crisis Map does, or <b>P2000 API</b> does in Netherlands.
+        </p>
+        <h3 id= "api_7"> 7.7 News API </h3>
+        <p> As right now we don't need such a carefully selected media, we can just stick to the News API which provides information from several media sources. This will help us to extend our alerts and interpret some of this news into
+            out application. As this will be kindly difficult for a plain server processing, the news will be formatted and accepted by the admin only if it fits the our requirements. By now there is only human interaction for approving
+            the content, but in the future there will be smarter analysis of the content.
+        </p>
+
+        <h3 id= "api_8"> 7.8 Notification</h3>
+        <p> At this point we will be figuring out some means of notification throughout diferent browsers, meaning that we need to find a way to alert the user in case out geolocation features togheter with server-side processing report
+            the need of a notification. For this we will get data related to different browsers/operating systems, and at the point we will be able to develop a stable version, we will kick a version implying this feature.
+        </p>
+    </section>
+
+    <section id="technologies">
+        <h1> 8. Technologies </h1>
+        <h3 id="tech_1"> 8.1 PHP backend</h3>
+        <p> The backend will be implemented in PHP, as this will be the most accessible and responsible for this type of application. Furthermore, the XAMPP stack will be most accessible through this type of backend. Our own REST API will also be supported
+            in PHP as to keep a homogeneous environment of working.
+        </p>
+        <h3 id="tech_2"> 8.2 MariaDB</h3>
+        <p> This type of database is most suitable for the application as it is also resonable with this type of stack, namely XAMPP. This SQL-based free database is powerful enough to deliver a fast and consistent bulk of information. For
+            developing purposes and at some extend for the efficient part, we will deplo this database on <b>AWS</b>.</p>
+
+        <h3 id="tech_3"> 8.3 HMTL CSS Javascript</h3>
+        <p> This is the main soul of our front-end part. This is understandable as we want to have full control of our front-end, thus using a raw version of design modelling. This part is mostly complete, but it will also include some
+            AJAX as we want to keep our communication with our server smooth and clean.
+        </p>
+
+
+        <h3 id="tech_4"> 8.4 Version control - Git</h3>
+        <p> This is a common choice for this type of applications, thus we will try to make use of it fully. There is not much to say related to this choice or why, aside the fact that we will be restricted to keep our repository public, watsoever.
+        </p>
+
+        <h3 id="tech_5"> 8.5 Server - Apache</h3>
+        <p> As the previous choice of technologies point towards XAMPP, endly the Apache is a natural choice. </p>
+
+        <h3 id="tech_5"> 8.6 Microservices - CAP</h3>
+        <p> We will make use of several microservices, from which the the most important is CAP, the common alerting protocol, one used, as the name stands,
+            for alerting a user in case of an emercency. We are still keeping under thinking this part, as the integration must be responsible.</p>
+    </section>
+    
+    <section id="bibliography">
+        <h1> 9. Bibliography & Sources</h1>
+        <h3 id="bibliography"> Bibliography </h3>
+        <p><a href="https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm">MVC Framework Introduction</a></p>
+        <p><a href="https://c4model.com/">C4 Model</a></p>
+        <h3 id="images"> Image sources </h3>
+        <p> <a href="https://helloacm.com/wp-content/uploads/2017/01/model-view-controller-mvc-explained.jpg" target="_blank" > MVC Model </a> </p>
+    </section>
+    
+    <footer>
+        <p> <b> TW Project 2019 - B3 Group </b> </p>
+        <p> Paduraru Dana </p>
+        <p> Stefan Alexandru </p>
+        <p> Gotca Adrian </p>
+        <p> Lungu Alexandru </p>
+    </footer>
+
+</body>
+
+</html>
