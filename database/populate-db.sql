@@ -1,26 +1,26 @@
 -- AUTHORITY
 -- for testing
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('Crisis Containment Center','alex.stefan007@gmail.com','123 456 233','https://www.crisisccenter.com/', 'Bachelor Street 12');
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('Power Nature','danapaduraru941@gmail.com','123 012 555','https://www.powernature.org/', 'General Barthelot Street 12 Iasi');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('Crisis Containment Center','alex.stefan007@gmail.com','123 456 233','https://www.crisisccenter.com/', 'Bachelor Street 12', 'parola');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('Power Nature','danapaduraru941@gmail.com','123 012 555','https://www.powernature.org/', 'General Barthelot Street 12 Iasi', 'parola');
 -- NOT for testing
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('United States Capitol Police','uscapitolpolice@contact.com','(202) 211 233','https://www.uscp.gov/', '119 D Street, NE Washington, DC 20510');
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('National Protection','nat_protection@contact.com','(858) 652-9930','https://natprotection.com/', 'San Diego, CA 92191');
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('Earthquake Hazards Program','nat_protection@contact.com','(202) 846-001','https://earthquake.usgs.gov', '12201 Sunrise Valley Drive, MS 905 ');
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('Unicef','unicef.contact@info.com','(153) 029 999','https://www.unicef.org/', '12201 9/4 Station 45');
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('Christian Aid','info@christian-aid.org','020 7620 4444','https://www.christianaid.org.uk/', 'Christian A35-41 Lower Marsh, London SE1 7RL');
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('Romanian Police','politiaromana@contact.ro','+201 111 222','https://www.politiaromana.ro/', 'Str. Mihai Voda, nr. 6, sector 5, Bucureşti, România');
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('Red Cross','contact@redcross.com','+405 444 111','https://www.redcross.org/', 'RedCross Center, Baker Street 221B');
-INSERT INTO authority (name, email, phone, website, address)
-VALUES ('Save the Children','contact@redcross.com','+61 1800 76','https://www.savethechildren.net/', 'Level 6, 250 Victoria Parade, East Melbourne, Victoria 3002');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('United States Capitol Police','uscapitolpolice@contact.com','(202) 211 233','https://www.uscp.gov/', '119 D Street, NE Washington, DC 20510', 'parola');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('National Protection','nat_protection@contact.com','(858) 652-9930','https://natprotection.com/', 'San Diego, CA 92191', 'parola');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('Earthquake Hazards Program','nat_protection@contact.com','(202) 846-001','https://earthquake.usgs.gov', '12201 Sunrise Valley Drive, MS 905 ', 'parola');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('Unicef','unicef.contact@info.com','(153) 029 999','https://www.unicef.org/', '12201 9/4 Station 45', 'parola');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('Christian Aid','info@christian-aid.org','020 7620 4444','https://www.christianaid.org.uk/', 'Christian A35-41 Lower Marsh, London SE1 7RL', 'parola');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('Romanian Police','politiaromana@contact.ro','+201 111 222','https://www.politiaromana.ro/', 'Str. Mihai Voda, nr. 6, sector 5, Bucureşti, România', 'parola');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('Red Cross','contact@redcross.com','+405 444 111','https://www.redcross.org/', 'RedCross Center, Baker Street 221B', 'parola');
+INSERT INTO authority (name, email, phone, website, address, password)
+VALUES ('Save the Children','contact@redcross.com','+61 1800 76','https://www.savethechildren.net/', 'Level 6, 250 Victoria Parade, East Melbourne, Victoria 3002', 'parola');
 
 
 

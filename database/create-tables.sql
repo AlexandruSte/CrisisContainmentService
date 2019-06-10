@@ -5,6 +5,7 @@ create table authority(
     phone VARCHAR(20) NOT NULL,
     website VARCHAR(50) NOT NULL,
     address VARCHAR(150) NOT NULL,
+    password VARCHAR(50) NOT NULL,
     PRIMARY KEY(id)
 );
 
