@@ -25,11 +25,11 @@
         {
             $connection = Connection::Instance();
             //check if already exists
-            $sql = "SELECT count(*) FROM authority WHERE email = '" . $this->email . "';";
+            $sql = "SELECT count(*) \"Number\" FROM authority WHERE email = '" . $this->email . "';";
             try {
                 $nr=0;
                 foreach ($connection->query($sql) as $row)
-                    $nr++;
+                    $nr+=$row['Number'];
                 if ($nr==0)
                     return false;
             }
