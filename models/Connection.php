@@ -4,7 +4,7 @@
         static private $connection;
         static private $url = "sqlsrv:server = tcp:crisiscontainmentservice.database.windows.net,1433; Database = CrisisContainmentService";
         static private $username = "crisisadmin";
-        static private $password = "Crisis1234";
+        static private $password = "...";
 
         public static function Instance()
         {

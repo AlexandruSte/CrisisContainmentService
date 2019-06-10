@@ -1,5 +1,5 @@
 <?php
-    require_once ('../models/Alert.php');
+    require_once('../../models/Alert.php');
 
     final class ReliefCollector {
 
