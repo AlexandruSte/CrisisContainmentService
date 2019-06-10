@@ -14,7 +14,7 @@
             $this->longitude = $longitude;
             $this->latitude = $latitude;
             $this->type = $type;
-            $this->desciption = $description;
+            $this->description = $description;
             $this->isSolved = $isSolved;
         }
 
@@ -133,7 +133,7 @@
 
         public function getDescription()
         {
-            return $this->desciption;
+            return $this->description;
         }
 
         public function setDescription($description)

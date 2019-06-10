@@ -26,8 +26,8 @@ create table alert(
     id INT NOT NULL IDENTITY,
     longitude FLOAT NOT NULL,
     latitude FLOAT NOT NULL,
-    type VARCHAR(10) NOT NULL,
-    description VARCHAR(200),
+    type VARCHAR(50) NOT NULL,
+    description VARCHAR(1000),
     isSolved BIT NOT NULL,
     PRIMARY KEY(id)
 );
