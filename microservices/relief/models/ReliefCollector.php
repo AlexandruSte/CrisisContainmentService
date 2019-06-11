@@ -1,7 +1,7 @@
 <?php
-    require_once('../../models/Alert.php');
-    require_once('../../models/Authority.php');
-    require_once('../../models/AuthorityAlert.php');
+    require_once('../../../models/Alert.php');
+    require_once('../../../models/Authority.php');
+    require_once('../../../models/AuthorityAlert.php');
 
     final class ReliefCollector {
 
