@@ -24,7 +24,8 @@ if(isset($_POST['submitBtn'])){
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     $alert_controller = new AlertController(null,null,null,null,null);
-    $alert_controller->getAlert()->loadById($_GET['id']);
+    $alert_controller->getAlert()->setId($_GET['id']);
+    $alert_controller->getAlert()->load();
     $_SESSION['alert'] = $alert_controller->getAlert();
-    header('Location: alert.php');
+    header('Location: ../views/alert.php');
 }
