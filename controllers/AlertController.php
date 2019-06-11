@@ -30,7 +30,7 @@ class AlertController{
         catch (PDOException $e) {
             return;
         }
-        header('Location: dashboard.html');
+        header('Location: dashboard.php');
     }
 
     public function getAlerts(){
@@ -40,7 +40,9 @@ class AlertController{
                 $conn = Connection::Instance();
                 $sql = "SELECT TOP(6) a.id, a.isSolved, a.title, a.description, a.type FROM authority_alert as aa join alert as a on a.id=aa.id_alert";
                 foreach ($conn->query($sql) as $row) {
-                    array_push($alerts,new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']));
+                    $alert = new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']);
+                    $alert->setId($row['id']);
+                    array_push($alerts,$alert);
                 }
             }
             catch (PDOException $e) {
@@ -52,7 +54,9 @@ class AlertController{
                 $conn = Connection::Instance();
                 $sql = "SELECT TOP(6) a.id, a.isSolved, a.title, a.description, a.type FROM user_alert as ua join alert as a on a.id=ua.id_alert";
                 foreach ($conn->query($sql) as $row) {
-                    array_push($alerts,new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']));
+                    $alert = new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']);
+                    $alert->setId($row['id']);
+                    array_push($alerts,$alert);
                 }
             }
             catch (PDOException $e) {
@@ -77,7 +81,9 @@ class AlertController{
                 "WHERE (a.latitude BETWEEN ". ($lat+0.1) ." AND ". ($lat-0.1) .")".
                 " AND (a.longitude BETWEEN ". ($long+$valueToAdd) ." AND ". ($long-$valueToAdd) .")";
             foreach ($conn->query($sql) as $row) {
-                array_push($alerts,new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']));
+                $alert = new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']);
+                $alert->setId($row['id']);
+                array_push($alerts,$alert);
             }
         }
         catch (PDOException $e) {
@@ -85,6 +91,16 @@ class AlertController{
         }
 
         $_SESSION['near_alerts'] = $alerts;
+    }
+
+    public function getAlert()
+    {
+        return $this->alert;
+    }
+
+    public function setAlert($alert)
+    {
+        $this->alert = $alert;
     }
 
 }

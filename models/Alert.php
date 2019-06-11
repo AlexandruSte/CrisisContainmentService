@@ -69,6 +69,29 @@
 
         }
 
+        public function loadById($id): bool
+        {
+            $connection = Connection::Instance();
+            $sql = "SELECT * FROM alert WHERE id = ".$id.";";
+            try
+            {
+                foreach ($connection->query($sql) as $row)
+                {
+                    $this->title = $row['title'];
+                    $this->longitude = $row['longitude'];
+                    $this->latitude = $row['latitude'];
+                    $this->type = $row['type'];
+                    $this->desciption = $row['description'];
+                    $this->isSolved = $row['isSolved'];
+                }
+                return true;
+            }
+            catch (PDOException $e) {
+                return false;
+            }
+
+        }
+
         //method used to save the current object with this specific id into the database
         public function save(): bool
         {

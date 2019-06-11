@@ -65,31 +65,4 @@
     </footer>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(redirectToPosition);
-        }
-    }
-
-    function redirectToPosition(position) {
-        $.ajax({
-            url: 'alert_helper.php',
-            type: 'POST',
-            data: {
-                lat: position.coords.latitude,
-                long: position.coords.longitude
-            },
-            success: function () {
-                console.log('a mers');
-                console.log(position.coords.latitude);
-                console.log(position.coords.longitude);
-            }
-        });
-    }
-
-    window.onload = getLocation;
-</script>
-
 </html>
