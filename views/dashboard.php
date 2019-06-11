@@ -85,6 +85,10 @@ session_start();
                         echo "<article>";
                         echo "<h3>" . $alert->getTitle() . "</h3>";
                         echo "<p>" . $alert->getDescription() . "</p>";
+                        echo "<form method=\"get\" action=\"alert_helper.php\">";
+                            echo "<input style='display: none;' value='" . $alert->getId() . "' name='id'>";
+                            echo "<input name=\"submitBtn\" id=\"submitButton\" class=\"btn-input\" type=\"submit\" value=\"Vezi detalii\">";
+                        echo "</form>";
                         echo "</article>";
                     }
                 }
