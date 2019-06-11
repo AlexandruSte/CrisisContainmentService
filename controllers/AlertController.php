@@ -3,7 +3,7 @@
 require_once('../models/Alert.php');
 require_once('../models/AuthorityAlert.php');
 require_once('../models/UserAlert.php');
-session_start();
+require_once('../models/Connection.php');
 
 class AlertController{
 
@@ -31,6 +31,60 @@ class AlertController{
             return;
         }
         header('Location: dashboard.html');
+    }
+
+    public function getAlerts(){
+        $alerts = array();
+        if($_SESSION['userType']==1){
+            try {
+                $conn = Connection::Instance();
+                $sql = "SELECT TOP(6) a.id, a.isSolved, a.title, a.description, a.type FROM authority_alert as aa join alert as a on a.id=aa.id_alert";
+                foreach ($conn->query($sql) as $row) {
+                    array_push($alerts,new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']));
+                }
+            }
+            catch (PDOException $e) {
+                print("Error connecting to SQL Server.");
+            }
+        }
+        else if($_SESSION['userType']==0){
+            try {
+                $conn = Connection::Instance();
+                $sql = "SELECT TOP(6) a.id, a.isSolved, a.title, a.description, a.type FROM user_alert as ua join alert as a on a.id=ua.id_alert";
+                foreach ($conn->query($sql) as $row) {
+                    array_push($alerts,new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']));
+                }
+            }
+            catch (PDOException $e) {
+                print("Error connecting to SQL Server.");
+            }
+        }
+
+        $_SESSION['alerts'] = $alerts;
+        //return $alerts;
+    }
+
+    public function getNearByAlerts(){
+        $lat = $_SESSION['lat'];
+        $long = $_SESSION['long'];
+        $valueToAdd = 0.2;
+        $alerts = array();
+
+        try {
+            $conn = Connection::Instance();
+            //~11 km latitude, ~15km longitude
+            $sql = "SELECT TOP(6) a.id, a.isSolved, a.title, a.description, a.type FROM alert as a " .
+                "WHERE (a.latitude BETWEEN ". ($lat+0.1) ." AND ". ($lat-0.1) .")".
+                " AND (a.longitude BETWEEN ". ($long+$valueToAdd) ." AND ". ($long-$valueToAdd) .")";
+            foreach ($conn->query($sql) as $row) {
+                array_push($alerts,new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']));
+            }
+        }
+        catch (PDOException $e) {
+            print("Error connecting to SQL Server.");
+        }
+
+        $_SESSION['near_alerts'] = $alerts;
     }
 
 }

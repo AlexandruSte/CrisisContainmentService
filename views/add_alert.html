@@ -37,6 +37,7 @@
         <form method="post" action="alert_helper.php">
             <p> The fields marked with * are mandatory.</p>
             <!-- maybe a map to enhance location control -->
+            <input name="title" placeholder="Title"></input>
             <label>
                 <select name="type">
                     <option value="default">Select type of alert*</option>
@@ -69,8 +70,6 @@
     function getLocation() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(redirectToPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
         }
     }
 
@@ -81,6 +80,11 @@
             data: {
                 lat: position.coords.latitude,
                 long: position.coords.longitude
+            },
+            success: function () {
+                console.log('a mers');
+                console.log(position.coords.latitude);
+                console.log(position.coords.longitude);
             }
         });
     }
