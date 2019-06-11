@@ -34,12 +34,12 @@
 
     <main>
         <h2>Add Alert</h2>
-        <form>
+        <form method="post" action="alert_helper.php">
             <p> The fields marked with * are mandatory.</p>
             <!-- maybe a map to enhance location control -->
             <input type="text" placeholder="Location*">
             <label>
-                <select>
+                <select name="type">
                     <option value="default">Select type of alert*</option>
                     <option value="tornado">Avalanche</option>
                     <option value="earthquake">Earthquake</option>
@@ -50,8 +50,8 @@
                     <option value="wildfire">Other</option>
                 </select>
             </label>
-            <textarea rows="4" placeholder="Describe the alert* (how many injured, when did it happen)"></textarea>
-            <a id="submitButton" class="btn btn-full" href="#">Submit!</a>
+            <textarea rows="4" name="description" placeholder="Describe the alert* (how many injured, when did it happen)"></textarea>
+            <input name="submitBtn" id="submitButton" class="btn btn-full" type="submit">Submit!</input>
         </form>
     </main>
 
@@ -64,5 +64,29 @@
         </ul>
     </footer>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(redirectToPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function redirectToPosition(position) {
+        $.ajax({
+            url: 'alert_helper.php',
+            type: 'POST',
+            data: {
+                lat: position.coords.latitude,
+                long: position.coords.longitude
+            }
+        });
+    }
+
+    window.onload = getLocation;
+</script>
 
 </html>
