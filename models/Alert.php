@@ -10,6 +10,21 @@
         private $description;
         private $isSolved;
 
+        public static function getCount()
+        {
+            $connection = Connection::Instance();
+            $sql = 'SELECT count(*) "Number" FROM alert';
+            try
+            {
+                foreach ($connection->query($sql) as $row)
+                    return $row['Number'];
+                return 0;
+            }
+            catch (PDOException $e) {
+                return 0;
+            }
+        }
+
         public function __construct ($title, $longitude, $latitude, $type, $description, $isSolved)
         {
             $this->title = $title;
@@ -58,30 +73,7 @@
                     $this->longitude = $row['longitude'];
                     $this->latitude = $row['latitude'];
                     $this->type = $row['type'];
-                    $this->desciption = $row['description'];
-                    $this->isSolved = $row['isSolved'];
-                }
-                return true;
-            }
-            catch (PDOException $e) {
-                return false;
-            }
-
-        }
-
-        public function loadById($id): bool
-        {
-            $connection = Connection::Instance();
-            $sql = "SELECT * FROM alert WHERE id = ".$id.";";
-            try
-            {
-                foreach ($connection->query($sql) as $row)
-                {
-                    $this->title = $row['title'];
-                    $this->longitude = $row['longitude'];
-                    $this->latitude = $row['latitude'];
-                    $this->type = $row['type'];
-                    $this->desciption = $row['description'];
+                    $this->description = $row['description'];
                     $this->isSolved = $row['isSolved'];
                 }
                 return true;
@@ -166,7 +158,7 @@
 
         public function setDescription($description)
         {
-            $this->desciption = $description;
+            $this->description = $description;
         }
 
         public function getIsSolved()
