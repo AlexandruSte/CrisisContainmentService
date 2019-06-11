@@ -6,23 +6,22 @@ body {
     text-align: justify;
 }
 
-h1, h3 {
+h1{
     color: #000c67;
+    font-weight: 700;
+    font-size: 180%;
 }
 
-h1 {
-    font-weight: 700;
+p {
+    font-size: 120%;
+}
+
+li {
+    font-size: 110%;
 }
 
 section {
     margin-bottom: 5%;
-}
-
-#mvc-pic {
-    width: 45%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #toc_container {
@@ -32,6 +31,7 @@ section {
 
 #toc_container li, #toc_container ul, #toc_container ul li{
     list-style: none ;
+    font-size: 110%;
 }
 
 footer {
