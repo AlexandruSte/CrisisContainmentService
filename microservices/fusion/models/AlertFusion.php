@@ -5,10 +5,9 @@
     class AlertFusion {
 
         private $alert;
-        private $api_key = "AIzaSyC-S2acn9xQZYFSlvdl7xAS8LbPAhUYDCQ";
-        private $past_table_id = "1VK-po2pNqHs7ZUHHBsNH15QsvBTzTdrN6eOS1B3j";
-        private $current_table_id = "1PfXQpnlFSwbcu63QjUMiiwufmTJzZwDzTjjCXXU4";
-        private $access_token = "ya29.GlsmBxMkBJ1B63wJNrM4vJInpMTj0TbDt45SLnCJHwMD1ceEkmoXBTOt5MjSLopjv8V9GKaISlmS-85MY1HBtm4U5OXrPTPABEAZh1kYhTqb7juoigca1U4ymqSk";
+        private static $api_key = "AIzaSyC-S2acn9xQZYFSlvdl7xAS8LbPAhUYDCQ";
+        private static $table = "1VK-po2pNqHs7ZUHHBsNH15QsvBTzTdrN6eOS1B3j";
+        private static $access_token = "ya29.GlsmBxMkBJ1B63wJNrM4vJInpMTj0TbDt45SLnCJHwMD1ceEkmoXBTOt5MjSLopjv8V9GKaISlmS-85MY1HBtm4U5OXrPTPABEAZh1kYhTqb7juoigca1U4ymqSk";
 
 
         public function __construct ($alert)
@@ -16,10 +15,10 @@
             $this->alert = $alert;
         }
 
-        private function httpPost($url, $fields)
+        private static function httpPost($url, $fields)
         {
             $fields_string = http_build_query($fields);
-            $authorization = "Authorization: Bearer " . $this->access_token;
+            $authorization = "Authorization: Bearer " . self::$access_token;
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', $authorization ));
             curl_setopt($ch,CURLOPT_URL, $url);
@@ -35,21 +34,28 @@
         {
             $base_url = "https://www.googleapis.com/fusiontables/v2/query";
             if ($this->alert->getIsSolved() == 1)
-                $table = $this->past_table_id ;
-            else
-                $table = $this->current_table_id;
-            $sql = "INSERT INTO " . $table . " (Id, Title, Location, Type, Description) VALUES ('"
+            $sql = "INSERT INTO " . sef::$table . " (Id, Title, Location, Type, Description) VALUES ('"
                 .$this->alert->getId()."', '"
                 .$this->alert->getTitle()."', '"
                 .$this->alert->getLatitude(). ", ".$this->alert->getLongitude()."', '"
                 .$this->alert->getType()."', "
                 .($this->alert->getDescription()==null?"NULL":"'".$this->alert->getDescription()."'").")";
-            $this->httpPost($base_url, [
+            self::httpPost($base_url, [
                 'sql' => $sql,
-                'key' => $this->api_key
+                'key' => self::$api_key
             ]);
             return true;
             // secret: FMyw8gE4JZStorGWTq0cz5v_
+        }
+
+        public static function clear()
+        {
+            $base_url = "https://www.googleapis.com/fusiontables/v2/query";
+            $sql = "DELETE FROM " . self::$table;
+            self::httpPost($base_url, [
+                'sql' => $sql,
+                'key' => self::$api_key
+            ]);
         }
 
     }
