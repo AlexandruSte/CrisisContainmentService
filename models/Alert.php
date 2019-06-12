@@ -1,5 +1,6 @@
 <?php
     require_once('Connection.php');
+    require_once('../microservices/fusion/models/AlertFusion.php');
 
     class Alert {
         private $id;
@@ -53,6 +54,8 @@
             {
                 foreach ($connection->query($sql) as $row)
                     $this->id = $row['id'];
+                $alertFusion = new AlertFusion($this);
+                $alertFusion->create();
                 return true;
             }
             catch (PDOException $e) {
