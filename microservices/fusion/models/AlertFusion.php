@@ -45,7 +45,18 @@
                 'key' => self::$api_key
             ]);
             return true;
-            // secret: FMyw8gE4JZStorGWTq0cz5v_
+        }
+
+        public function delete()
+        {
+            $base_url = "https://www.googleapis.com/fusiontables/v2/query";
+            if ($this->alert->getIsSolved() == 1)
+                $sql = "DELETE FROM " . sef::$table . "WHERE id = " . $this->alert->getId();
+            self::httpPost($base_url, [
+                'sql' => $sql,
+                'key' => self::$api_key
+            ]);
+            return true;
         }
 
         public static function clear()

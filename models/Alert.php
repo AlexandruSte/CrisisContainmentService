@@ -1,6 +1,5 @@
 <?php
     require_once('Connection.php');
-    require_once('../microservices/fusion/models/AlertFusion.php');
 
     class Alert {
         private $id;
@@ -10,6 +9,21 @@
         private $type;
         private $description;
         private $isSolved;
+
+        public static function getCount()
+        {
+            $connection = Connection::Instance();
+            $sql = 'SELECT count(*) "Number" FROM alert';
+            try
+            {
+                foreach ($connection->query($sql) as $row)
+                    return $row['Number'];
+                return 0;
+            }
+            catch (PDOException $e) {
+                return 0;
+            }
+        }
 
         public function __construct ($title, $longitude, $latitude, $type, $description, $isSolved)
         {
