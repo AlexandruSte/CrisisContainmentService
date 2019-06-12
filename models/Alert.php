@@ -76,7 +76,7 @@
                     $this->longitude = $row['longitude'];
                     $this->latitude = $row['latitude'];
                     $this->type = $row['type'];
-                    $this->desciption = $row['description'];
+                    $this->description = $row['description'];
                     $this->isSolved = $row['isSolved'];
                 }
                 return true;
