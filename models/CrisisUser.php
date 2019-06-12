@@ -34,7 +34,7 @@
                 $nr=0;
                 foreach ($connection->query($sql) as $row)
                     $nr+=$row['Number'];
-                if ($nr==0)
+                if ($nr!=0)
                     return false;
             }
             catch (PDOException $e) {
@@ -119,7 +119,12 @@
         public function find($email, $password): bool
         {
             $connection = Connection::Instance();
-            $sql = "SELECT * FROM crisis_user WHERE email = '".$email."' AND password = '".$password."';";
+            if (!isset($email)) return false;
+            $sql = "SELECT * FROM crisis_user WHERE email = '".$email."'";
+            if (isset($password)){
+                $sql=$sql." AND password = '".$password."'";
+            }
+            $sql = $sql.";";
             try
             {
                 foreach ($connection->query($sql) as $row)
