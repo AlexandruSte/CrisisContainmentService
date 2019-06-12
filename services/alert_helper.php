@@ -7,7 +7,7 @@ if(!isset($_POST['submitBtn'])) {
     $_SESSION['lat'] = $_POST['lat'];
     $_SESSION['long'] = $_POST['long'];
     /******************************/
-    $_SESSION['userType'] = 1;
+    $_SESSION['userType'] = 2;
     $_SESSION['userId'] = 1;
      /****************************/
     $alert_controller = new AlertController(null,null,null,null,null);

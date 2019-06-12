@@ -34,15 +34,15 @@
     <main>
         <h2>Register Missing Person</h2>
         <h4><i>This person was involved in ... </i></h4>
-        <form>
+        <form method="post" action="../services/alert_mp_helper.php">
             <p> The fields marked with * are mandatory.</p>
-            <input type="text" placeholder="First Name*">
-            <input type="text" placeholder="Last Name*">
-            <textarea rows="4" placeholder="Physical description* (age, height, weight, hair/eyes color, birthmarks or other distinctive marks on the skin, what was the person wearing last time you saw him/her)"></textarea>
+            <input type="text" placeholder="First Name*" name="firstname">
+            <input type="text" placeholder="Last Name*" name="lastname">
+            <textarea rows="4" name="description" placeholder="Physical description* (age, height, weight, hair/eyes color, birthmarks or other distinctive marks on the skin, what was the person wearing last time you saw him/her)"></textarea>
             <label> Upload photo: </label>
             <input type="file" name="file"/>
-            <input type="text" placeholder="Last time you interacted/saw the person*">
-            <a id="submitButton" class="btn btn-full" href="#">Submit!</a>
+            <input type="text" placeholder="Last time you interacted/saw the person*" name="interaction">
+            <input name="submitBtn" id="submitButton" class="btn-input" type="submit" value="Submit!">
         </form>
     </main>
 

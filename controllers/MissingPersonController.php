@@ -43,4 +43,12 @@ class MissingPersonController{
         }
         $_SESSION['people'] = $people;
     }
+
+    public function getPerson(){
+        return $this->missingPerson;
+    }
+
+    public function setPerson($person){
+        $this->missingPerson = $person;
+    }
 }

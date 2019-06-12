@@ -38,7 +38,7 @@ class AlertController{
         if($_SESSION['userType']==1){
             try {
                 $conn = Connection::Instance();
-                $sql = "SELECT TOP(6) a.id, a.isSolved, a.title, a.description, a.type FROM authority_alert as aa join alert as a on a.id=aa.id_alert";
+                $sql = "SELECT TOP(6) a.id, a.isSolved, a.title, a.description, a.type FROM authority_alert as aa join alert as a on a.id=aa.id_alert WHERE a.isSolved=0";
                 foreach ($conn->query($sql) as $row) {
                     $alert = new Alert($row['title'],null,null,$row['type'],$row['description'],$row['isSolved']);
                     $alert->setId($row['id']);

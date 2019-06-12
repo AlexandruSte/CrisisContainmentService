@@ -4,6 +4,7 @@ require_once('../models/Alert.php');
 require_once('../models/MissingPerson.php');
 session_start();
 $alert = $_SESSION['alert'];
+$_SESSION['alert_id'] = $alert->getId();
 ?>
 <html lang="en">
 
@@ -49,7 +50,7 @@ $alert = $_SESSION['alert'];
 
     if ($alert->getIsSolved() == 0) {
         if ($_SESSION['userType'] == 1)
-            echo '<button type="submit">Mark as solved</button>';
+            echo '<button type="submit" onclick="mark_alert('. $alert->getId() .')">Mark as solved</button>';
         else
             echo '<button type="submit">Add a missing person</button>';
     } else
@@ -79,7 +80,7 @@ $alert = $_SESSION['alert'];
             echo '<td>' . $person->getDescription() . '</td>';
             if($person->getIsSolved()==0) {
                 if ($_SESSION['userType'] == 1)
-                    echo '<td> <button type="submit">Mark as found</button> </td>';
+                    echo '<td> <button type="submit" onclick="mark_person('. $person->getId() .')">Mark as found</button> </td>';
                 else
                     echo "<td>Not found</td>";
             }
@@ -112,6 +113,32 @@ $alert = $_SESSION['alert'];
             type: 'GET',
             success: function () {
                 console.log('a mers');
+            }
+        });
+    }
+
+    function mark_person(id){
+        $.ajax({
+            url: '../services/alert_mp_helper.php',
+            type: 'POST',
+            data: {
+                id_person: id
+            },
+            success: function () {
+                location.reload();
+            }
+        });
+    }
+
+    function mark_alert(id){
+        $.ajax({
+            url: '../services/alert_mp_helper.php',
+            type: 'POST',
+            data: {
+                id_alert: id
+            },
+            success: function () {
+                location.reload();
             }
         });
     }
