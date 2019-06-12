@@ -33,8 +33,7 @@
         public function create()
         {
             $base_url = "https://www.googleapis.com/fusiontables/v2/query";
-            if ($this->alert->getIsSolved() == 1)
-            $sql = "INSERT INTO " . sef::$table . " (Id, Title, Location, Type, Description) VALUES ('"
+            $sql = "INSERT INTO " . self::$table . " (Id, Title, Location, Type, Description) VALUES ('"
                 .$this->alert->getId()."', '"
                 .$this->alert->getTitle()."', '"
                 .$this->alert->getLatitude(). ", ".$this->alert->getLongitude()."', '"
