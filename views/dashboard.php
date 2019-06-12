@@ -118,16 +118,11 @@ session_start();
 
     function redirectToPosition(position) {
         $.ajax({
-            url: 'alert_helper.php',
+            url: '../services/alert_helper.php',
             type: 'POST',
             data: {
                 lat: position.coords.latitude,
                 long: position.coords.longitude
-            },
-            success: function () {
-                console.log('a mers');
-                console.log(position.coords.latitude);
-                console.log(position.coords.longitude);
             }
         });
     }

@@ -30,7 +30,7 @@ class AlertController{
         catch (PDOException $e) {
             return;
         }
-        header('Location: dashboard.php');
+        header('Location: ../views/dashboard.php');
     }
 
     public function getAlerts(){

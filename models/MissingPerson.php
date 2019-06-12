@@ -184,5 +184,15 @@
         {
             $this->id_alert = $id_alert;
         }
+
+        public function getIsSolved()
+        {
+            return $this->isSolved;
+        }
+
+        public function setIsSolved($isSolved)
+        {
+            $this->isSolved = $isSolved;
+        }
     }
 ?>
