@@ -110,6 +110,8 @@
             $sql = "DELETE FROM alert WHERE id = ".$this->id.";";
             if (!($ok = $connection->exec($sql)))
                 return false;
+            $alertFusion = new AlertFusion($this);
+            $alertFusion->delete();
             return true;
         }
 
