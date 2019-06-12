@@ -1,5 +1,6 @@
 <?php
     require_once('Connection.php');
+    require_once('../microservices/fusion/models/AlertFusion.php');
 
     class Alert {
         private $id;
