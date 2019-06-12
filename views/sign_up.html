@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../style/form.css">
     <link rel="stylesheet" href="../style/global_1300.css">
     <link rel="stylesheet" href="../style/global_930.css">
+    <script src="./sign_up.js"></script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
 
 
         <div id="authority_form" style="display:none">
-            <form name="authority" method="POST" action="sign_up.php" onsubmit="return authorityValidate()">
+            <form name="authority" method="POST" onsubmit="return authorityValidate()" action="sign_up.php">
                 <p> The fields marked with * are mandatory.</p>
                 <input type="text" name="name" placeholder="Full Name*">
                 <input type="text" name="email" placeholder="E-Mail*">
@@ -56,7 +57,7 @@
         </div>
 
         <div id="citizen_form" style="display:none">
-            <form name="citizen" method="POST" action="sign_up.php" onsubmit="return citizenValidate()">
+            <form name="citizen" method="POST" onsubmit="return citizenValidate()" action="sign_up.php">
                 <p> The fields marked with * are mandatory.</p>
                 <input type="text" name="first_name" placeholder="First Name*">
                 <input type="text" name="last_name" placeholder="Last Name*">
@@ -65,8 +66,8 @@
                 <input type="password" name="confirm_password" placeholder="Confirm password*">
                 <input type="text" name="zip" placeholder="Zip Code">
                 <input type="text" name="city" placeholder="City*">
-                <label name="country">
-                    <select>
+                <label>
+                    <select name="country">
                         <option value="Default" selected>Country*</option>
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
@@ -326,7 +327,5 @@
     </footer>
 
 </body>
-
-<script src="./sign_up.js"></script>
 
 </html>

@@ -40,7 +40,7 @@ session_start();
         <!-- To be reshaped-->
         <?php
         if($_SESSION['userType']==1)
-            echo "<h2> Signed as Autority</h2>";
+            echo "<h2> Signed as Authority</h2>";
         else
             echo "<h2> Signed as Citizen</h2>"
         ?>

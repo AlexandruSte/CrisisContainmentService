@@ -9,6 +9,7 @@
         if ($user->find($email,$password)){
             $_SESSION['email']=$email;
             $_SESSION['userType']=0;
+            $_SESSION['userId']=$user->getId();
             header('Location: dashboard.php');
         }
         else {
@@ -16,6 +17,7 @@
             if ($authority->find($email,$password)){
                 $_SESSION['email']=$email;
                 $_SESSION['userType']=1;
+                $_SESSION['userId']=$authority->getId();
                 header('Location: dashboard.php');
             }
             else {
