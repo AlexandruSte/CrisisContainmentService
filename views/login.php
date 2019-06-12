@@ -8,12 +8,14 @@
         $user=new CrisisUser(null,null,null,null,null,null,null,null);
         if ($user->find($email,$password)){
             $_SESSION['email']=$email;
+            $_SESSION['userType']=0;
             header('Location: dashboard.php');
         }
         else {
             $authority=new Authority(null, null, null, null, null, null);
             if ($authority->find($email,$password)){
                 $_SESSION['email']=$email;
+                $_SESSION['userType']=1;
                 header('Location: dashboard.php');
             }
             else {
